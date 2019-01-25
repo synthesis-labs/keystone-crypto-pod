@@ -1,0 +1,6 @@
+framework module Pods_KeystoneCrypto_Tests {
+  umbrella header "Pods-KeystoneCrypto_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

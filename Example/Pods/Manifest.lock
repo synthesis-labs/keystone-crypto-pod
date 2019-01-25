@@ -1,0 +1,23 @@
+PODS:
+  - IDZSwiftCommonCrypto (0.9.3)
+  - KeystoneCrypto (1.0.0):
+    - IDZSwiftCommonCrypto (~> 0.9.1)
+
+DEPENDENCIES:
+  - KeystoneCrypto (from `../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - IDZSwiftCommonCrypto
+
+EXTERNAL SOURCES:
+  KeystoneCrypto:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  IDZSwiftCommonCrypto: 03ea02798d8cf2c2a08aa31b1b991e779fb163ed
+  KeystoneCrypto: 808d139fa9d24a072eed738d7a77c72bb0d20ec3
+
+PODFILE CHECKSUM: 7975484d64622092350ce21f2666107acad90e5d
+
+COCOAPODS: 1.5.3

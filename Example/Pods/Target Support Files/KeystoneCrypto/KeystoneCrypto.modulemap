@@ -1,0 +1,6 @@
+framework module KeystoneCrypto {
+  umbrella header "KeystoneCrypto-umbrella.h"
+
+  export *
+  module * { export * }
+}
