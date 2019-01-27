@@ -1,11 +1,3 @@
-#
-# Be sure to run `pod lib lint KeystoneCrypto.podspec' to ensure this is a
-# valid spec before submitting.
-#
-# Any lines starting with a # are optional, but their use is encouraged
-# To learn more about a Podspec see https://guides.cocoapods.org/syntax/podspec.html
-#
-
 Pod::Spec.new do |s|
     s.name             = 'KeystoneCrypto'
     s.version          = '1.0.0'
@@ -22,8 +14,6 @@ Pod::Spec.new do |s|
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Kieron Ekron' => 'kieron@synthesis.co.za' }
   s.source           = { :git => 'https://github.com/synthesis-labs/keystone-crypto-pod.git', :tag => s.version.to_s }
-  
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '10.0'
   s.swift_version         = '4.0'
