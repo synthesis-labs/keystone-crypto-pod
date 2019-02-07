@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = 'KeystoneCrypto'
-    s.version          = '1.0.0'
+    s.version          = '1.0.1'
     s.summary          = 'Crypto functions to interact with Keystone service'
 
     s.description      = <<-DESC
@@ -22,5 +22,6 @@ Pod::Spec.new do |s|
   s.source_files = 'KeystoneCrypto/Classes/**/*.{swift}'
   
   s.dependency 'IDZSwiftCommonCrypto', '~> 0.9.1'
+  s.dependency 'SwiftyRSA', '~> 1.5.0'
   
 end

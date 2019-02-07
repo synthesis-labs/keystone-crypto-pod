@@ -9,17 +9,18 @@
 import Foundation
 import Security
 import IDZSwiftCommonCrypto
-
-public enum KeyType {
-    case AES
-    case TripleDES
-}
+import SwiftyRSA
 
 public class LocalKey {
+    public enum KeyType {
+        case AES
+        case TripleDES
+    }
+    
     private var localKey: [UInt8]!
     private var encryptedKeyMaterial : String!
     private var wrappingKey : OneTimeKey!
-    private var publicKey : SecKey!
+    private var publicKey : PublicKey!
     private var kcv: String!
     private var keyType: KeyType = KeyType.TripleDES
     
@@ -57,17 +58,9 @@ public class LocalKey {
         return keyType
     }
 
-    private func LoadPublicKey(wrappingKey: OneTimeKey) throws -> SecKey {
-        let attributes = [kSecAttrKeyType: kSecAttrKeyTypeRSA, kSecAttrKeyClass: kSecAttrKeyClassPublic] as CFDictionary
-        let error = UnsafeMutablePointer<Unmanaged<CFError>?>.allocate(capacity: 1)
-        let data = NSData(bytes: wrappingKey.getKeyMaterial(), length: wrappingKey.getKeyMaterial().count)
-        let key = SecKeyCreateWithData(data, attributes, error)
-        
-        guard key != nil else {
-            throw KeystoneExceptions.InvalidOneTimeKeyException(message: "Error loading public key")
-        }
-        
-        return key!
+    private func LoadPublicKey(wrappingKey: OneTimeKey) throws -> PublicKey {
+        let pubKey = try PublicKey(base64Encoded: wrappingKey.getKeyMaterial())
+        return pubKey
     }
     
     private func CalculateKCV(localKey: [UInt8]) throws -> String {
@@ -129,31 +122,9 @@ public class LocalKey {
         return key
     }
 
-    private func EncryptLocalKey(localKey: [UInt8], pubKey: SecKey) throws -> String {
-        let blockSize = SecKeyGetBlockSize(pubKey)
-        var localKeyEncrypted = [UInt8](repeating: 0, count: blockSize)
-        var localKeyEncryptedSize = blockSize
-        
-        var status: OSStatus!
-        
-        //use OAEP padding
-        status = SecKeyEncrypt(
-            pubKey,
-            SecPadding.OAEP,
-            localKey,
-            localKey.count,
-            &localKeyEncrypted,
-            &localKeyEncryptedSize
-        )
-        
-        guard status == noErr else {
-            throw KeystoneExceptions.CryptoError(message: "Error encrypting local key with public key")
-        }
-        
-        
-        let data = NSData(bytes: localKeyEncrypted, length: localKeyEncryptedSize)
-        let base64Data = data.base64EncodedString(options: NSData.Base64EncodingOptions.endLineWithLineFeed)
-        
-        return base64Data
+    private func EncryptLocalKey(localKey: [UInt8], pubKey: PublicKey) throws -> String {
+        let clear = ClearMessage(data: Data(bytes: localKey))
+        let encrypted = try clear.encrypted(with: pubKey, padding: .OAEP)
+        return encrypted.base64String
     }
 }

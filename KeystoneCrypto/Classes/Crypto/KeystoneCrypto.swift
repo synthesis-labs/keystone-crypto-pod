@@ -16,7 +16,7 @@ public class KeystoneCrypto{
         
     }
     
-    public func GenerateLocalKey(otk: OneTimeKey, keyType: KeyType = KeyType.TripleDES) throws -> LocalKey {
+    public func GenerateLocalKey(otk: OneTimeKey, keyType: LocalKey.KeyType = LocalKey.KeyType.TripleDES) throws -> LocalKey {
         do {
             let key = try LocalKey(wrappingKey: otk, keyType: keyType)
             return key
@@ -34,8 +34,8 @@ public class KeystoneCrypto{
             
             let pinblock: Pinblock
         
-            if (key.getKeyType() == KeyType.TripleDES) {
-                pinblock = try DESPinToPinblock(pin: pin, key: key)
+            if (key.getKeyType() == LocalKey.KeyType.TripleDES) {
+                pinblock = try DESPinToPinblock(pin: pin, key: key, pan: pan)
             } else {
                 pinblock = try AESPinToPinblock(pin: pin, key: key, pan: pan)
             }
@@ -51,7 +51,7 @@ public class KeystoneCrypto{
         do {
             let pin: String
         
-            if (key.getKeyType() == KeyType.TripleDES) {
+            if (key.getKeyType() == LocalKey.KeyType.TripleDES) {
                 pin = try DESPinblockToPin(pinblock: pinblock, key: key)
             }
             else {
@@ -82,12 +82,27 @@ public class KeystoneCrypto{
         return randomString
     }
     
-    private func DESPinToPinblock(pin: String, key: LocalKey) throws -> Pinblock {
-        var pinblock = "1"
-        pinblock.append(String(pin.count))
-        pinblock.append(pin)
-        pinblock.append(RandomString(length: 16 - pinblock.count))
-        let hexData = pinblock.hexaData
+    private func DESPinToPinblock(pin: String, key: LocalKey, pan: String) throws -> Pinblock {
+        guard pan.count >= 13, pan.isNumber else {
+            throw KeystoneExceptions.InvalidInput(message: "PAN must be at least 13 decimal characters")
+        }
+        
+        var panhalf = "0000"
+        let indexStartOfPan = pan.index(at: pan.count - 1 - 12)!
+        let indexEndOfPan = pan.index(at: pan.count - 1)!
+        panhalf.append(String(pan[indexStartOfPan..<indexEndOfPan]))
+        let panbytes = panhalf.hexaData
+        
+        var pinhalf = "0"
+        pinhalf.append(String(pin.count))
+        pinhalf.append(pin)
+        pinhalf.append(String(repeating: "F", count: 16 - pinhalf.count))
+        let pinbytes = pinhalf.hexaData
+        
+        var clearPinblock = [UInt8]()
+        for (index, item) in (panbytes.enumerated()) {
+            clearPinblock.append(item ^ pinbytes[index])
+        }
         
         let cryptor = Cryptor(
             operation: .encrypt,
@@ -98,7 +113,7 @@ public class KeystoneCrypto{
             keyByteCount: key.getKey().count,
             ivBuffer: Array<UInt8>()
         )
-        let result = cryptor.update(data: hexData)
+        let result = cryptor.update(byteArray: clearPinblock)
         guard result != nil, result!.final() != nil else {
             throw KeystoneExceptions.CryptoError(message: "Error encrypting pin block")
         }
@@ -110,7 +125,9 @@ public class KeystoneCrypto{
             encryptedPinblock: base64Data,
             encryptedZPK: key.getEncryptedKeyMaterial(),
             zpkKCV: key.getKCV(),
-            wrappingKeyId: key.getWrappingKey().getId()
+            wrappingKeyId: key.getWrappingKey().getId(),
+            pan: pan,
+            format: Pinblock.PinblockFormat.DES_ISO95641_ANSIX98_0
         )
         
         return pb
@@ -132,40 +149,46 @@ public class KeystoneCrypto{
         guard result != nil, result!.final() != nil else {
             throw KeystoneExceptions.CryptoError(message: "Error decrypting pin block")
         }
-        let unencryptedPinBlock = result!.final()!
+        let clearPinblock = result!.final()!
         
-        let decryptedString = unencryptedPinBlock.hexEncodedString
+        var panhalf = "0000"
+        let indexStartOfPan = pinblock.getPAN()!.index(at: pinblock.getPAN()!.count - 1 - 12)!
+        let indexEndOfPan = pinblock.getPAN()!.index(at: pinblock.getPAN()!.count - 1)!
+        panhalf.append(String(pinblock.getPAN()![indexStartOfPan..<indexEndOfPan]))
+        let panbytes = panhalf.hexaData
         
-        let pinLen = Int(String(decryptedString.character(at: 1)!))!
+        var pinbytes = [UInt8]()
+        for (index, item) in (panbytes.enumerated()) {
+            pinbytes.append(item ^ clearPinblock[index])
+        }
+        let pinhalf = pinbytes.hexEncodedString
         
-        let indexStartOfPinblock = decryptedString.index(decryptedString.startIndex, offsetBy: 2) //from 2 to read pin
-        let indexEndOfText = decryptedString.index(indexStartOfPinblock, offsetBy: pinLen)
+        let pinLen = Int(String(pinhalf.character(at: 1)!))!
         
-        let clearPin = String(decryptedString[indexStartOfPinblock..<indexEndOfText])
+        let indexStartOfPinblock = pinhalf.index(pinhalf.startIndex, offsetBy: 2) //from 2 to read pin
+        let indexEndOfText = pinhalf.index(indexStartOfPinblock, offsetBy: pinLen)
+        
+        let clearPin = String(pinhalf[indexStartOfPinblock..<indexEndOfText])
         
         return clearPin
     }
     
     private func AESPinToPinblock(pin: String, key: LocalKey, pan: String) throws -> Pinblock {
-        guard pan.count >= 12, pan.isNumber else {
+        guard pan.isNumber else {
             throw KeystoneExceptions.InvalidInput(message: "PAN must be at least 12 decimal characters")
         }
         
         var pinhalf = "4"
         pinhalf.append(String(pin.count))
         pinhalf.append(pin)
-        
-        for _ in pinhalf.count ..< 16 {
-            pinhalf.append("A")
-        }
-        
+        pinhalf.append(String(repeating: "A", count: 16 - pinhalf.count))
         pinhalf.append(RandomString(length: 16))
         
-        var panhalf = String(pan.count - 12) + pan
-        
-        while panhalf.count < 32 {
-            panhalf.append("0")
-        }
+        var panhalf = String(pan.count - 1 - 12)
+        let indexStartOfPan = pan.index(at: 0)!
+        let indexEndOfPan = pan.index(at: pan.count - 1)!
+        panhalf.append(String(pan[indexStartOfPan..<indexEndOfPan]))
+        panhalf.append(String(repeating: "0", count: 32 - panhalf.count))
         
         //Encrypt pinhalf using AES key
         let cryptor = Cryptor(
@@ -214,7 +237,8 @@ public class KeystoneCrypto{
             encryptedZPK: key.getEncryptedKeyMaterial(),
             zpkKCV: key.getKCV(),
             wrappingKeyId: key.getWrappingKey().getId(),
-            pan: pan
+            pan: pan,
+            format: Pinblock.PinblockFormat.AES_ISO95641_4
         )
         
         return pb

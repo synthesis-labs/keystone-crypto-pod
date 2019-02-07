@@ -19,7 +19,7 @@ class Tests: XCTestCase {
             
             // 1) This ID and public key base 64 must be fetched from the backend server. This otk should be linked to the calling user
             let otkId = "12345"
-            let otkBase64 = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0WuhgKiPvp1hW6pnPUO6BrQO7z6xhczt21qqXnGLoH/kleYNMBusoOD1hR23SUBm+CIC/yBrQ4Y5CV+PHaFL+Uk963uI4Fuuh4zmkFksCXbaZDYLwaxXCxzekCh61YiPPQzHaqPf7alzaxVMnycIQlgNipA8/8FqmILss8ikRwlV4BuUnZmLmYjFIk+/4p5NPYE+RvW3pOCuYTPLJMquHK/0vofdfC5Yw3yDaEOHHx4rFrFjmuni1th4r/bHypkesFCshNyjhw6AhaUoDsLAWzXWmA/2IChs3u/kzqfFEn2Sy427+6zKZPoW6R7nA1Ho9bcMIaZYBYBXf6pznD7WxwIDAQAB"
+            let otkBase64 = "MIIBCgKCAQEAuZRZyULptjTEbioVpUGOMoS38jbr7rQ0lXpJMG2y68KhHRI9EDTybwpz0tcmSCLK5XLTB89r7xzLN9jg8zodU/0pBUQQwbqqjfuXPZEFW7pmM7YjgiBMXllkvcsIZFkSd10xMNYXMJQQEcIxrKnISCzlGPYdpFU4sRzxynWcnqEqz+vHRgNkSD8di910tZY/7plvuSMIUilsK5hGhrrrc06hDVABXOdrtzIvZM8GEXa7cjDDCOmKof7SKOmBPMmm6j1x4iMi72Zzrvy58lQUAb3EGyOHihCJ8UNRkdBWjKNfy8JmVuh0ExANkf9Kk+/fGEWdUx82xnBGoTjidGSnuQIDAQAB"
             
             let otk = try OneTimeKey(id: otkId, keyMaterialBase64: otkBase64)
             

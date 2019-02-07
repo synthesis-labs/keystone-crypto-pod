@@ -9,28 +9,19 @@
 import Foundation
 
 public class OneTimeKey {
-    var keyMaterial: [UInt8]
+    var keyMaterial: String
     var id : String
 
     public init(id: String, keyMaterialBase64: String) throws {
-        do {
-            self.id = id
-            let bytes = keyMaterialBase64.base64Bytes
-            guard bytes != nil else {
-                throw KeystoneExceptions.InvalidInput(message: "Invalid base64 data for one time key")
-            }
-            self.keyMaterial = bytes!
-        }
-        catch let error {
-            throw error
-        }
+        self.id = id
+        self.keyMaterial = keyMaterialBase64
     }
 
     public func getId() -> String {
         return id
     }
 
-    func getKeyMaterial() -> [UInt8] {
+    func getKeyMaterial() -> String {
         return keyMaterial
     }
 
