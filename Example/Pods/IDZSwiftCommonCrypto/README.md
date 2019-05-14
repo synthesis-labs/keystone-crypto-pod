@@ -6,6 +6,8 @@ A Swift wrapper for Apple's `CommonCrypto` library.
 
 IDZSwiftCommonCrypto works with both CocoaPods and Cathage. For more details on how to install it into your projects see [INSTALL.md](INSTALL.md)
 
+**If you are using CococaPods you must use `pod cache clean IDZSwiftCommonCrypto --all` after you upgrade Xcode. This is needed to avoid stale module maps being used from the CocoaPods cache. Removing your Podfile.lock and Pods directory is not sufficient.**
+
 IDZSwiftCommonCrypto provides the following classes:
 
 * `Digest` for calculating message digests,
@@ -22,7 +24,7 @@ Which version you use depends on which version of Xcode and Swift you are curren
 * 0.8.0 -- Xcode 7.3.1, Swift 2.2, with additional APIs for `CCMode`
 * 0.8.3 -- Xcode 8.0, Swift 2.3
 * 0.9.x -- Xcode 8.0, Swift 3.0
-
+* 0.10.x -- Xcode 9.0, Swift 4.0
 
 Using `Digest`
 --------------
@@ -54,11 +56,11 @@ let digests1 = md5s1.final()
 
 If you only have a single buffer you can simply write
 ```swift
-  var digests3 = Digest(algorithm: .MD5).update(b)?.final() // digest is of type [UInt8]?
+  var digests3 = Digest(algorithm: .md5).update(b)?.final() // digest is of type [UInt8]?
 ```
 or 
 ```swift
-  var digests4 = Digest(algorithm: .MD5).update(s)?.final() // digest is of type [UInt8]?
+  var digests4 = Digest(algorithm: .md5).update(s)?.final() // digest is of type [UInt8]?
 ```
 
 ### Supported Algorithms

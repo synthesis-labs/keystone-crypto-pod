@@ -22,7 +22,7 @@
   "source_files": "KeystoneCrypto/Classes/**/*.{swift}",
   "dependencies": {
     "IDZSwiftCommonCrypto": [
-      "~> 0.9.1"
+      "~> 0.11.0"
     ],
     "SwiftyRSA": [
       "~> 1.5.0"
