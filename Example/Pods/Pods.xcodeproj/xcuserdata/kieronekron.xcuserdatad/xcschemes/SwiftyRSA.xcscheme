@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "EF80EED9FB2879C86C3448FB442C3CAA"
-               BlueprintName = "Pods-KeystoneCrypto_Tests"
+               BlueprintIdentifier = "9FC710D20A8F2B246EBE77AE1B8E6B71"
+               BlueprintName = "SwiftyRSA"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "Pods-KeystoneCrypto_Tests.framework">
+               BuildableName = "SwiftyRSA.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

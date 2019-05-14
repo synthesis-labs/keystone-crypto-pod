@@ -272,6 +272,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-KeystoneCrypto_Example/Pods-KeystoneCrypto_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/IDZSwiftCommonCrypto/IDZSwiftCommonCrypto.framework",
 				"${BUILT_PRODUCTS_DIR}/KeystoneCrypto/KeystoneCrypto.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyRSA/SwiftyRSA.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -279,6 +280,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IDZSwiftCommonCrypto.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeystoneCrypto.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyRSA.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

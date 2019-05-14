@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8C30345DD396E2D7E3226ADA61B938D9"
+               BlueprintIdentifier = "39FCA23CFD353C076E210CBFABEF0BE6"
                BlueprintName = "KeystoneCrypto"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "KeystoneCrypto.framework">

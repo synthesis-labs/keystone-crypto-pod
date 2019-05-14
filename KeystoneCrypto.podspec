@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = 'KeystoneCrypto'
-    s.version          = '1.0.1'
+    s.version          = '1.0.2'
     s.summary          = 'Crypto functions to interact with Keystone service'
 
     s.description      = <<-DESC
@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/synthesis-labs/keystone-crypto-pod.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '10.0'
-  s.swift_version         = '4.0'
+  s.swift_version         = '5.0'
   s.platform              = :ios, '10.0'
 
   s.source_files = 'KeystoneCrypto/Classes/**/*.{swift}'

@@ -1,7 +1,6 @@
 use_frameworks!
 
 target 'KeystoneCrypto_Example' do
-    #platform :ios, '10.0'
   pod 'KeystoneCrypto', :path => '../'
 
   target 'KeystoneCrypto_Tests' do
