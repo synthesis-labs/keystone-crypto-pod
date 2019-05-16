@@ -94,9 +94,12 @@ public class LocalKey {
     private func GenerateRandomKeyBytes(len: Int) throws -> [UInt8] {
         
         var keyData = Data(count: Int(len))
-        let result = keyData.withUnsafeMutableBytes {
-            (mutableBytes: UnsafeMutablePointer<UInt8>) -> Int32 in
-            SecRandomCopyBytes(kSecRandomDefault, len, mutableBytes)
+        
+        let result = try keyData.withUnsafeMutableBytes { (mutableBytes: UnsafeMutableRawBufferPointer) -> Int32 in
+            if mutableBytes.baseAddress == nil {
+                throw KeystoneExceptions.CryptoError(message: "Error generating random key")
+            }
+            return SecRandomCopyBytes(kSecRandomDefault, len, mutableBytes.baseAddress!)
         }
         
         if result == errSecSuccess {
@@ -123,7 +126,7 @@ public class LocalKey {
     }
 
     private func EncryptLocalKey(localKey: [UInt8], pubKey: PublicKey) throws -> String {
-        let clear = ClearMessage(data: Data(bytes: localKey))
+        let clear = ClearMessage(data: Data(_: localKey))
         let encrypted = try clear.encrypted(with: pubKey, padding: .OAEP)
         return encrypted.base64String
     }
