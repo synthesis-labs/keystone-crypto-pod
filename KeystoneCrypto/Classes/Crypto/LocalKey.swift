@@ -73,9 +73,8 @@ public class LocalKey {
                 algorithm: .tripleDES,
                 mode: .ECB,
                 padding: .NoPadding,
-                keyBuffer: localKey,
-                keyByteCount: localKey.count,
-                ivBuffer: Array<UInt8>()
+                key: localKey,
+                iv: Array<UInt8>()
             )
             let result = cryptor.update(buffer: kcvData, byteCount: kcvData.count)
             guard result != nil, result!.final() != nil else {
