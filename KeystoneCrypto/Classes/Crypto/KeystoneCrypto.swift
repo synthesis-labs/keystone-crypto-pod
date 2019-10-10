@@ -15,7 +15,7 @@ public class KeystoneCrypto{
     public init() {
         
     }
-    
+
     public func GenerateLocalKey(otk: OneTimeKey, keyType: LocalKey.KeyType = LocalKey.KeyType.TripleDES) throws -> LocalKey {
         do {
             let key = try LocalKey(wrappingKey: otk, keyType: keyType)
@@ -109,9 +109,8 @@ public class KeystoneCrypto{
             algorithm: .tripleDES,
             mode: .ECB,
             padding: .NoPadding,
-            keyBuffer: key.getKey(),
-            keyByteCount: key.getKey().count,
-            ivBuffer: Array<UInt8>()
+            key: key.getKey(),
+            iv: Array<UInt8>()
         )
         let result = cryptor.update(byteArray: clearPinblock)
         guard result != nil, result!.final() != nil else {
@@ -139,9 +138,8 @@ public class KeystoneCrypto{
             algorithm: .tripleDES,
             mode: .ECB,
             padding: .NoPadding,
-            keyBuffer: key.getKey(),
-            keyByteCount: key.getKey().count,
-            ivBuffer: Array<UInt8>()
+            key: key.getKey(),
+            iv: Array<UInt8>()
         )
         
         let data = Data(base64Encoded: pinblock.getEncryptedPinblock())
@@ -189,22 +187,22 @@ public class KeystoneCrypto{
         let indexEndOfPan = pan.index(at: pan.count - 1)!
         panhalf.append(String(pan[indexStartOfPan..<indexEndOfPan]))
         panhalf.append(String(repeating: "0", count: 32 - panhalf.count))
-        
+
         //Encrypt pinhalf using AES key
         let cryptor = Cryptor(
             operation: .encrypt,
             algorithm: .aes,
             mode: .ECB,
             padding: .NoPadding,
-            keyBuffer: key.getKey(),
-            keyByteCount: key.getKey().count,
-            ivBuffer: Array<UInt8>()
+            key: key.getKey(),
+            iv: Array<UInt8>()
         )
         var result = cryptor.update(data: pinhalf.hexaData)
         guard result != nil, result!.final() != nil else {
             throw KeystoneExceptions.CryptoError(message: "Error encrypting pinblock")
         }
         let intermediateValue1 = result!.final()!
+
         
         //Intermediate block A is then XOR'd with PAN block
         let panhalfArr = panhalf.hexaData
@@ -213,23 +211,22 @@ public class KeystoneCrypto{
         for (index, item) in (intermediateValue1.enumerated()) {
             xor.append(item ^ panhalfArr[index])
         }
-        
+
         //Intermediate block B is the enciphered with AES key again
         let cryptor2 = Cryptor(
             operation: .encrypt,
             algorithm: .aes,
             mode: .ECB,
             padding: .NoPadding,
-            keyBuffer: key.getKey(),
-            keyByteCount: key.getKey().count,
-            ivBuffer: Array<UInt8>()
+            key: key.getKey(),
+            iv: Array<UInt8>()
         )
         result = cryptor2.update(byteArray: xor)
         guard result != nil, result!.final() != nil else {
             throw KeystoneExceptions.CryptoError(message: "Error encrypting pinblock")
         }
         let intermediateValue2 = result!.final()!
-        
+
         let data = NSData(bytes: intermediateValue2, length: intermediateValue2.count)
         let base64Data = data.base64EncodedString(options: NSData.Base64EncodingOptions.endLineWithLineFeed)
         let pb = Pinblock(
@@ -249,26 +246,27 @@ public class KeystoneCrypto{
         guard pan != nil, pan!.isNumber, pan!.count >= 12 else {
             throw KeystoneExceptions.InvalidInput(message: "PAN is required for an AES pinblock to be decrypted. PAN must be at least 12 decimal characters")
         }
-        var panhalf = String(pan!.count - 12) + pan!
-        
-        while panhalf.count < 32 {
-            panhalf.append("0")
-        }
-        
+                
+        var panhalf = String(pan!.count - 1 - 12)
+        let indexStartOfPan = pan!.index(at: 0)!
+        let indexEndOfPan = pan!.index(at: pan!.count - 1)!
+        panhalf.append(String(pan![indexStartOfPan..<indexEndOfPan]))
+        panhalf.append(String(repeating: "0", count: 32 - panhalf.count))
+                
         let cryptor = Cryptor(
             operation: .decrypt,
             algorithm: .aes,
             mode: .ECB,
             padding: .NoPadding,
-            keyBuffer: key.getKey(),
-            keyByteCount: key.getKey().count,
-            ivBuffer: Array<UInt8>()
+            key: key.getKey(),
+            iv: Array<UInt8>()
         )
 
         let data = pinblock.getEncryptedPinblock().base64Bytes
         guard data != nil else {
             throw KeystoneExceptions.InvalidPinblockException(message: "Encrypted pinblock is not valid base64")
         }
+
         
         var result = cryptor.update(byteArray: data!)
         guard result != nil, result!.final() != nil else {
@@ -287,9 +285,8 @@ public class KeystoneCrypto{
             algorithm: .aes,
             mode: .ECB,
             padding: .NoPadding,
-            keyBuffer: key.getKey(),
-            keyByteCount: key.getKey().count,
-            ivBuffer: Array<UInt8>()
+            key: key.getKey(),
+            iv: Array<UInt8>()
         )
         result = cryptor2.update(byteArray: xor)
         guard result != nil, result!.final() != nil else {
