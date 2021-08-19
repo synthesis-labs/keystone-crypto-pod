@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = 'KeystoneCrypto'
-    s.version          = '1.0.4'
+    s.version          = '1.1.0'
     s.summary          = 'Crypto functions to interact with Keystone service'
 
     s.description      = <<-DESC
