@@ -1,7 +1,7 @@
-FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/IDZSwiftCommonCrypto" "${PODS_CONFIGURATION_BUILD_DIR}/KeystoneCrypto" "${PODS_CONFIGURATION_BUILD_DIR}/SwiftyRSA"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/IDZSwiftCommonCrypto" "${PODS_CONFIGURATION_BUILD_DIR}/KeystoneCrypto"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/IDZSwiftCommonCrypto/IDZSwiftCommonCrypto.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/KeystoneCrypto/KeystoneCrypto.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/SwiftyRSA/SwiftyRSA.framework/Headers"
-OTHER_LDFLAGS = $(inherited) -framework "IDZSwiftCommonCrypto" -framework "KeystoneCrypto" -framework "Security" -framework "SwiftyRSA"
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/IDZSwiftCommonCrypto/IDZSwiftCommonCrypto.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/KeystoneCrypto/KeystoneCrypto.framework/Headers"
+OTHER_LDFLAGS = $(inherited) -framework "IDZSwiftCommonCrypto" -framework "KeystoneCrypto"
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
 PODS_PODFILE_DIR_PATH = ${SRCROOT}/.

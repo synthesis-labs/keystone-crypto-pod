@@ -15,12 +15,11 @@ Pod::Spec.new do |s|
   s.author           = { 'Kieron Ekron' => 'kieron@synthesis.co.za' }
   s.source           = { :git => 'https://github.com/synthesis-labs/keystone-crypto-pod.git', :tag => s.version.to_s }
 
-  s.ios.deployment_target = '11.0'
+  s.ios.deployment_target = '10.0'
   s.swift_version         = '4.0', '5.0'
 
   s.source_files = 'KeystoneCrypto/Classes/**/*.{swift}'
   
   s.dependency 'IDZSwiftCommonCrypto', '0.13.0'
-  s.dependency 'SwiftyRSA', '1.7.0'
   
 end

@@ -16,7 +16,7 @@
     "tag": "1.0.4"
   },
   "platforms": {
-    "ios": "11.0"
+    "ios": "10.0"
   },
   "swift_versions": [
     "4.0",
@@ -26,9 +26,6 @@
   "dependencies": {
     "IDZSwiftCommonCrypto": [
       "0.13.0"
-    ],
-    "SwiftyRSA": [
-      "1.7.0"
     ]
   },
   "swift_version": "5.0"
