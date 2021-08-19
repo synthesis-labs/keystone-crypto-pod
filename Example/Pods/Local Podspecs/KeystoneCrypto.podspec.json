@@ -1,6 +1,6 @@
 {
   "name": "KeystoneCrypto",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "summary": "Crypto functions to interact with Keystone service",
   "description": "Contains the necessary functions to interact with Keystone including:\n- Generation of local encryption key\n- Encryption of PIN\n- Decryption of PINBlock",
   "homepage": "https://github.com/synthesis-labs/keystone-crypto-pod",
@@ -13,19 +13,20 @@
   },
   "source": {
     "git": "https://github.com/synthesis-labs/keystone-crypto-pod.git",
-    "tag": "1.0.3"
+    "tag": "1.0.4"
   },
   "platforms": {
     "ios": "10.0"
   },
-  "swift_version": "5.0",
+  "swift_versions": [
+    "4.0",
+    "5.0"
+  ],
   "source_files": "KeystoneCrypto/Classes/**/*.{swift}",
   "dependencies": {
     "IDZSwiftCommonCrypto": [
-      "~> 0.13.0"
-    ],
-    "SwiftyRSA": [
-      "~> 1.5.0"
+      "0.13.0"
     ]
-  }
+  },
+  "swift_version": "5.0"
 }

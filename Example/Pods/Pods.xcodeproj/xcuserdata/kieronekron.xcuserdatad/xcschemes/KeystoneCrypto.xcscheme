@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0930"
+   LastUpgradeVersion = "1100"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "39FCA23CFD353C076E210CBFABEF0BE6"
+               BlueprintIdentifier = "E62DFEE38EEB0F91D090E42121B93548"
+               BuildableName = "KeystoneCrypto.framework"
                BlueprintName = "KeystoneCrypto"
-               ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "KeystoneCrypto.framework">
+               ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

@@ -9,7 +9,6 @@
 import Foundation
 import Security
 import IDZSwiftCommonCrypto
-import SwiftyRSA
 
 public class LocalKey {
     public enum KeyType {
@@ -20,7 +19,7 @@ public class LocalKey {
     private var localKey: [UInt8]!
     private var encryptedKeyMaterial : String!
     private var wrappingKey : OneTimeKey!
-    private var publicKey : PublicKey!
+    private var publicKey : SecKey!
     private var kcv: String!
     private var keyType: KeyType = KeyType.TripleDES
     
@@ -58,8 +57,20 @@ public class LocalKey {
         return keyType
     }
 
-    private func LoadPublicKey(wrappingKey: OneTimeKey) throws -> PublicKey {
-        let pubKey = try PublicKey(base64Encoded: wrappingKey.getKeyMaterial())
+    private func LoadPublicKey(wrappingKey: OneTimeKey) throws -> SecKey {
+        let attributes: [String: Any] = [
+            kSecAttrKeyType as String: kSecAttrKeyTypeRSA,
+            kSecAttrKeyClass as String: kSecAttrKeyClassPublic,
+            kSecAttrIsPermanent as String: false
+        ]
+        let data = Data(base64Encoded: wrappingKey.getKeyMaterial())!
+        var error: Unmanaged<CFError>?
+        guard let pubKey = SecKeyCreateWithData(data as CFData,
+                                                attributes as CFDictionary,
+                                                &error) as SecKey? else {
+            throw error!.takeRetainedValue() as Error
+        }
+        
         return pubKey
     }
     
@@ -124,9 +135,17 @@ public class LocalKey {
         return key
     }
 
-    private func EncryptLocalKey(localKey: [UInt8], pubKey: PublicKey) throws -> String {
-        let clear = ClearMessage(data: Data(_: localKey))
-        let encrypted = try clear.encrypted(with: pubKey, padding: .OAEP)
-        return encrypted.base64String
+    private func EncryptLocalKey(localKey: [UInt8], pubKey: SecKey) throws -> String {
+        let algorithm: SecKeyAlgorithm = .rsaEncryptionOAEPSHA1
+        var error: Unmanaged<CFError>?
+        guard let cipherText = SecKeyCreateEncryptedData(publicKey,
+                                                         algorithm,
+                                                         Data(localKey) as CFData,
+                                                         &error) as Data? else {
+                                                            throw error!.takeRetainedValue() as Error
+        }
+        
+        return cipherText.base64EncodedString()
+        
     }
 }
