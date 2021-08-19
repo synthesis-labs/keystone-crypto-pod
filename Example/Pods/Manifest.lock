@@ -2,10 +2,10 @@ PODS:
   - IDZSwiftCommonCrypto (0.13.0)
   - KeystoneCrypto (1.0.4):
     - IDZSwiftCommonCrypto (= 0.13.0)
-    - SwiftyRSA (= 1.5.0)
-  - SwiftyRSA (1.5.0):
-    - SwiftyRSA/ObjC (= 1.5.0)
-  - SwiftyRSA/ObjC (1.5.0)
+    - SwiftyRSA (= 1.7.0)
+  - SwiftyRSA (1.7.0):
+    - SwiftyRSA/ObjC (= 1.7.0)
+  - SwiftyRSA/ObjC (1.7.0)
 
 DEPENDENCIES:
   - KeystoneCrypto (from `../`)
@@ -21,9 +21,9 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   IDZSwiftCommonCrypto: 00dd37cdfbd149312a7e5a582cf9909f8b129f44
-  KeystoneCrypto: 77880654896e206da8dbab9ba461a804cd153d5b
-  SwiftyRSA: 6e528fb1b1a87d5111c48081083b141d6d65f1cf
+  KeystoneCrypto: 5e505d642d7bf66a2d0b019bd7be6c44eae66098
+  SwiftyRSA: 8c6dd1ea7db1b8dc4fb517a202f88bb1354bc2c6
 
-PODFILE CHECKSUM: 683402c8f0943947398a296092989aa19ebf1b02
+PODFILE CHECKSUM: 3918a979ec1c051dc28aea3552b7f0c1f9fc1329
 
 COCOAPODS: 1.8.3
