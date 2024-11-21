@@ -21,7 +21,14 @@ public class Pinblock {
     private var pan: String
     private var format: PinblockFormat
 
-    init(encryptedPinblock: String, encryptedZPK: String?, zpkKCV: String?, wrappingKeyId: String?, pan: String, format: PinblockFormat) {
+    init(
+        encryptedPinblock: String,
+        encryptedZPK: String?,
+        zpkKCV: String?,
+        wrappingKeyId: String?,
+        pan: String,
+        format: PinblockFormat
+    ) {
         self.encryptedPinblock = encryptedPinblock
         self.encryptedZPK = encryptedZPK
         self.wrappingKeyId = wrappingKeyId
@@ -29,32 +36,39 @@ public class Pinblock {
         self.pan = pan
         self.format = format
     }
-    
+
     public convenience init(encryptedPinblock: String, pan: String, format: PinblockFormat) {
-        self.init(encryptedPinblock: encryptedPinblock, encryptedZPK: nil, zpkKCV: nil, wrappingKeyId: nil, pan: pan, format: format)
+        self.init(
+            encryptedPinblock: encryptedPinblock,
+            encryptedZPK: nil,
+            zpkKCV: nil,
+            wrappingKeyId: nil,
+            pan: pan,
+            format: format
+        )
     }
 
     public func getEncryptedPinblock() -> String {
         return encryptedPinblock
     }
 
-    public func getEncryptedZPK() -> String?{
+    public func getEncryptedZPK() -> String? {
         return encryptedZPK
     }
 
     public func getWrappingKeyId() -> String? {
         return wrappingKeyId
     }
-    
+
     public func getZpkKCV() -> String? {
         return zpkKCV
     }
-    
+
     public func getPAN() -> String? {
         return pan
     }
-    
+
     public func getFormat() -> PinblockFormat {
-        return format;
+        return format
     }
 }
