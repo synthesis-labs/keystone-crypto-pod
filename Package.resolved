@@ -1,0 +1,15 @@
+{
+  "originHash" : "6ed6349797c17cf5dd56c0d5fbc366469ab7856e10622a5ff924777df8ef5817",
+  "pins" : [
+    {
+      "identity" : "idzswiftcommoncrypto",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/iosdevzone/IDZSwiftCommonCrypto.git",
+      "state" : {
+        "revision" : "d824371e670bd57eb456bbc41139b4997f7207b8",
+        "version" : "0.13.1"
+      }
+    }
+  ],
+  "version" : 3
+}
