@@ -222,7 +222,7 @@ public class KeystoneCrypto {
         pinhalf.append(String(repeating: "A", count: 16 - pinhalf.count))
         pinhalf.append(RandomString(length: 16))
 
-        var panhalf = String(pan.count - 1 - 12)
+        var panhalf = String(pan.count - 12)
         let indexStartOfPan = pan.index(at: 0)!
         let indexEndOfPan = pan.index(at: pan.count - 1)!
         panhalf.append(String(pan[indexStartOfPan..<indexEndOfPan]))
@@ -289,7 +289,7 @@ public class KeystoneCrypto {
             )
         }
 
-        var panhalf = String(pan!.count - 1 - 12)
+        var panhalf = String(pan!.count - 12)
         let indexStartOfPan = pan!.index(at: 0)!
         let indexEndOfPan = pan!.index(at: pan!.count - 1)!
         panhalf.append(String(pan![indexStartOfPan..<indexEndOfPan]))
