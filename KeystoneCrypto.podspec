@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = 'KeystoneCrypto'
-    s.version = '0.0.0-develop-63781012c4692146fde2d7755c5a0ea96bcb6f3a'
+    s.version = '0.0.0-develop-3c23fe64caed58b340e9bf35e85e5852a59acee1'
     s.summary          = 'Crypto functions to interact with Keystone service'
 
     s.description      = <<-DESC
@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
   s.homepage         = 'https://github.com/synthesis-labs/keystone-crypto-pod'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Kieron Ekron' => 'kieron@synthesis.co.za' }
-  s.source           = { :git => 'https://github.com/synthesis-labs/keystone-crypto-pod.git', :tag => s.version = '0.0.0-develop-63781012c4692146fde2d7755c5a0ea96bcb6f3a' }
+  s.source           = { :git => 'https://github.com/synthesis-labs/keystone-crypto-pod.git', :tag => s.version = '0.0.0-develop-3c23fe64caed58b340e9bf35e85e5852a59acee1' }
 
   s.ios.deployment_target = '10.0'
   s.swift_version         = '4.0', '5.0'
