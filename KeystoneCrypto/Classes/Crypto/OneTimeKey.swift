@@ -10,7 +10,7 @@ import Foundation
 
 public class OneTimeKey {
     var keyMaterial: String
-    var id : String
+    var id: String
 
     public init(id: String, keyMaterialBase64: String) {
         self.id = id

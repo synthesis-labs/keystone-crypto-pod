@@ -12,7 +12,7 @@ KeystoneCrypto is available through [CocoaPods](https://cocoapods.org). To insta
 it, simply add the following lines to your Podfile:
 
 ```ruby
-source 'https://github.com/synthesis-labs/synthesis-specs.git' 
+source 'https://github.com/synthesis-labs/keystone-crypto-pod.git' 
 pod 'KeystoneCrypto'
 ```
 

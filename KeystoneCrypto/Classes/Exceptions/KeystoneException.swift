@@ -8,7 +8,7 @@
 
 import Foundation
 
-public enum KeystoneExceptions : Error {
+public enum KeystoneExceptions: Error {
     case InvalidInput(message: String)
     case CryptoError(message: String)
     case InvalidPinblockException(message: String)

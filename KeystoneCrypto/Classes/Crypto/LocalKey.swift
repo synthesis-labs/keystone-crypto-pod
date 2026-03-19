@@ -15,14 +15,14 @@ public class LocalKey {
         case AES
         case TripleDES
     }
-    
+
     private var localKey: [UInt8]!
-    private var encryptedKeyMaterial : String!
-    private var wrappingKey : OneTimeKey!
-    private var publicKey : SecKey!
+    private var encryptedKeyMaterial: String!
+    private var wrappingKey: OneTimeKey!
+    private var publicKey: SecKey!
     private var kcv: String!
     private var keyType: KeyType = KeyType.TripleDES
-    
+
     public init(wrappingKey: OneTimeKey, keyType: KeyType = KeyType.TripleDES) throws {
         self.keyType = keyType
         self.wrappingKey = wrappingKey
@@ -31,12 +31,11 @@ public class LocalKey {
             try self.localKey = GenerateLocalKey(keyType: keyType)
             try self.encryptedKeyMaterial = EncryptLocalKey(localKey: self.localKey, pubKey: self.publicKey)
             try self.kcv = CalculateKCV(localKey: self.localKey)
-        }
-        catch let error {
+        } catch let error {
             throw error
         }
     }
-    
+
     public func getEncryptedKeyMaterial() -> String {
         return encryptedKeyMaterial
     }
@@ -48,13 +47,20 @@ public class LocalKey {
     public func getKey() -> [UInt8] {
         return localKey
     }
-    
+
     public func getKCV() -> String {
         return kcv
     }
-    
+
     public func getKeyType() -> KeyType {
         return keyType
+    }
+
+    public func getWrappedClientKey() -> WrappedClientKey {
+        return WrappedClientKey(
+            wrappedKey: encryptedKeyMaterial,
+            alg: keyType
+        )
     }
 
     private func LoadPublicKey(wrappingKey: OneTimeKey) throws -> SecKey {
@@ -70,22 +76,22 @@ public class LocalKey {
                                                 &error) as SecKey? else {
             throw error!.takeRetainedValue() as Error
         }
-        
+
         return pubKey
     }
-    
+
     private func CalculateKCV(localKey: [UInt8]) throws -> String {
-        if (self.keyType == KeyType.TripleDES) {
+        if self.keyType == KeyType.TripleDES {
             let kcvData = [UInt8](repeating: 0, count: 16)
-            
-            //Encrypt pinhalf using DES key
+
+            // Encrypt pinhalf using DES key
             let cryptor = Cryptor(
                 operation: .encrypt,
                 algorithm: .tripleDES,
                 mode: .ECB,
                 padding: .NoPadding,
                 key: localKey,
-                iv: Array<UInt8>()
+                iv: [UInt8]()
             )
             let result = cryptor.update(buffer: kcvData, byteCount: kcvData.count)
             guard result != nil, result!.final() != nil else {
@@ -93,45 +99,43 @@ public class LocalKey {
             }
             let encryptedPinBlock = result!.final()!
             let kcv = String(encryptedPinBlock.hexEncodedString[..<6])
-            
+
             return kcv
-        }
-        else {
+        } else {
             return "000000"
         }
     }
-    
+
     private func GenerateRandomKeyBytes(len: Int) throws -> [UInt8] {
-        
+
         var keyData = Data(count: Int(len))
-        
+
         let result = try keyData.withUnsafeMutableBytes { (mutableBytes: UnsafeMutableRawBufferPointer) -> Int32 in
             if mutableBytes.baseAddress == nil {
                 throw KeystoneExceptions.CryptoError(message: "Error generating random key")
             }
             return SecRandomCopyBytes(kSecRandomDefault, len, mutableBytes.baseAddress!)
         }
-        
+
         if result == errSecSuccess {
             return keyData.base64EncodedString().base64Bytes!
         } else {
             throw KeystoneExceptions.CryptoError(message: "Error generating random key")
         }
     }
-    
-    private func GenerateLocalKey(keyType : KeyType) throws -> [UInt8] {
-        let key : [UInt8]
+
+    private func GenerateLocalKey(keyType: KeyType) throws -> [UInt8] {
+        let key: [UInt8]
         do {
             if keyType == KeyType.AES {
-                try key = GenerateRandomKeyBytes(len: 32)
+                try key = GenerateRandomKeyBytes(len: 16)
             } else {
                 try key = GenerateRandomKeyBytes(len: 24)
             }
-        }
-        catch let error {
+        } catch let error {
             throw error
         }
-        
+
         return key
     }
 
@@ -144,8 +148,8 @@ public class LocalKey {
                                                          &error) as Data? else {
                                                             throw error!.takeRetainedValue() as Error
         }
-        
+
         return cipherText.base64EncodedString()
-        
+
     }
 }

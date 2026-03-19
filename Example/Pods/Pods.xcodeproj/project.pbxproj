@@ -7,61 +7,63 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00C99E563C2C051865CE570DEDBBA6FA /* Pods-KeystoneCrypto_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E07F4DB9F811268B14B53A5A0FF3FF /* Pods-KeystoneCrypto_Example-dummy.m */; };
-		03D4A0F5E0A230A7069F8BF28ED10658 /* IDZSwiftCommonCrypto-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AB16774FD913C0A1C31F80D21466317F /* IDZSwiftCommonCrypto-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		14AD0547E38EAD0883299CCB9BB86D33 /* StreamCryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EAC8C056FA5A3412F2DF1FFF600944 /* StreamCryptor.swift */; };
-		16A199AAE0B7629291A318F7A13DF88F /* Pinblock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F3974241325201D5C5C8E8D97A7F15 /* Pinblock.swift */; };
-		16FF60AEF8BDF680E69FFE8D0F614098 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A0B24BD2ECF070EE9FFECF420A4226 /* Extensions.swift */; };
-		2E831A9886BDCF29B953F30383265714 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924F2E7E2BA06CDD9608DC2392B5E1BE /* Status.swift */; };
-		2E92B60D28F1CABCE755FCB200A28FFB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 976C66317FFD0B38E73DBA1A9CE34148 /* Foundation.framework */; };
-		2FE5A927C6146A560706AFE8C1068180 /* Pods-KeystoneCrypto_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7387A2D2BF92513423D5CC7347DBE21D /* Pods-KeystoneCrypto_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		364808C7540F96122D1B16DA0EF4C969 /* IDZSwiftCommonCrypto-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2E8B7E7BB0A99D45C003918B9145DA /* IDZSwiftCommonCrypto-dummy.m */; };
-		3E01F2F5CE4A4F4C00E22C25AB431493 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 976C66317FFD0B38E73DBA1A9CE34148 /* Foundation.framework */; };
-		46BDBB53A122C61BB57176EDC7B0867B /* KeystoneCrypto-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BB9D3311E024419AF6A37565759D9BD2 /* KeystoneCrypto-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4B79DCA16200AF4B72C8E81C2AD72B81 /* LocalKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9A953CF64C62DAD59664358F4A2DC6 /* LocalKey.swift */; };
-		4E593D6412D15E074FC8304B67B785B1 /* Pods-KeystoneCrypto_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 548813DE088F032D531FE963A138E6AE /* Pods-KeystoneCrypto_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5CDC5CDF76B670032B2C58E5E587AA16 /* KeystoneCrypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB2577932EED1E35E53E54C00914C50 /* KeystoneCrypto.swift */; };
-		75D530664023A484050EADD55877CD8B /* HMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB73CC8ADE604C78943147E63B20731 /* HMAC.swift */; };
-		933BAADFC3816CF5EE8CFBCC6BE4424C /* Cryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92393B5044FDE26C0B38B7B82A932D59 /* Cryptor.swift */; };
-		939975641DC10C8823502EA163E1310D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 976C66317FFD0B38E73DBA1A9CE34148 /* Foundation.framework */; };
-		9864DC4F08630FCC23B11459F2C60EB2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 976C66317FFD0B38E73DBA1A9CE34148 /* Foundation.framework */; };
-		A1CFD39AF089C65E454BE6C58BE56228 /* Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFBFEDD5147481D3A76D7AC0C8B4465 /* Crypto.swift */; };
-		A5677E401214643A8B46A597833C8049 /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D44D8457ED934FD8659E5026C4B83EA /* Random.swift */; };
-		B8E4FBBFF2283E3639F37832D8FB2D4F /* OneTimeKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A467C0360161248E9D103B1B7FEC27 /* OneTimeKey.swift */; };
-		BA7DEE6AD3A449F9CE63743CA82A5F0D /* KeystoneCrypto-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FD563C7EF2D28986F0471D86C9C399FE /* KeystoneCrypto-dummy.m */; };
-		CC18E4DB49380E1FF368D3F9FFE39C71 /* KeyDerivation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC3EEA19AFE9ABA099CCAF705E2FF09 /* KeyDerivation.swift */; };
-		D65300734807700F9BADBA44EB81A7F8 /* Pods-KeystoneCrypto_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F31F7B55B63C418B951CC33B80B2C2E8 /* Pods-KeystoneCrypto_Tests-dummy.m */; };
-		DF3CD48EDD8167AA226E30C1CFF40FA0 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393D8ACD38DD3418D34DB7235479E03E /* Utilities.swift */; };
-		EEBEDF0CB5F64E3A43E5A3D13F2AD317 /* Updateable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7186E420528B359BE66A1AEAEE5DAE2E /* Updateable.swift */; };
-		F14C42030FE41B62B53508C74403E6D2 /* IDZSwiftCommonCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9253CFAA783F9510C62E3A1C4623068F /* IDZSwiftCommonCrypto.framework */; };
-		F23964FE7080465FC457D3A7E91047BE /* KeystoneException.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B768B2623B6270ED69F915552CA40E /* KeystoneException.swift */; };
-		F280D8F4FE4554C40F2016334EB65DDC /* IDZSwiftCommonCrypto.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D3E8425266149EC678CD98F188E1BA8 /* IDZSwiftCommonCrypto.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F8A1ECE491BBFD57439F2E08BE0C4517 /* Digest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690471CB2FC22742B36F86158DDE1084 /* Digest.swift */; };
+		0C6669BF552B68DD470920F13D44A2E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		1CF2622A9EC870C1671D95FB8735772C /* StreamCryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCDA0E0F0A6656E3F19D34F6A2CEF9A /* StreamCryptor.swift */; };
+		23549232EE1EA449A2D01F2DD7333AE4 /* EncryptedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493652759844B585C9E673E0D5450A84 /* EncryptedData.swift */; };
+		299BB11DBAB3148320FDC5F2818352BD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		2AC1DB21BD133A4FB312D2EE3621FBF2 /* Updateable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AE38C7735692484008CC6CAC9F817C /* Updateable.swift */; };
+		2F0E84F4493822DEDF3BEBC7E0218C05 /* Pods-KeystoneCrypto_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 548813DE088F032D531FE963A138E6AE /* Pods-KeystoneCrypto_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3495526D7021C1E1A6FE3D459D1ED60B /* OneTimeKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E9E5227CEAEF05793AE0400959BEB /* OneTimeKey.swift */; };
+		3C0715440B7FC6A3ED09FC52E711B9F8 /* KeystoneException.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832C2E506FC5B1EF06E118DB75EAC7D /* KeystoneException.swift */; };
+		3C7DE12D81F3DECABAFFC9003086E5F1 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB5A46957A517CD36E597601572C0A1 /* Extensions.swift */; };
+		3EA5B6157E4A63A21EF991D0D741F178 /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B76F1109E5EAF97542B772DBF7E19EB /* Random.swift */; };
+		3F214B62E08C8AE59DEAA4A5FBF70F1A /* Pods-KeystoneCrypto_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7387A2D2BF92513423D5CC7347DBE21D /* Pods-KeystoneCrypto_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4903A10183B3070CFAB4F824A1D9CE4C /* WrappedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A4CB0278DC28463C0351F76D0209C8 /* WrappedData.swift */; };
+		4E45F286EF400DFEC0ED0EB3EC3B44B6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		5521B6F9DBD2C287978D6E3F142E059C /* KeystoneCrypto-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 039B84CA049389292554FB33380E16EE /* KeystoneCrypto-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		567E1BA77A058C58DE3CB3A5C615D77F /* LocalKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D52FB1023F79A37873D318899EE91F /* LocalKey.swift */; };
+		6F09DF8E8DF7D4C9C1B10014ECF8F23C /* Pods-KeystoneCrypto_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F31F7B55B63C418B951CC33B80B2C2E8 /* Pods-KeystoneCrypto_Tests-dummy.m */; };
+		70E8AA2D114B4E4377D6399D73AE9DB1 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D404B0EFF809C8BF5FDB2DEDBC82C5 /* Utilities.swift */; };
+		7544C9402451C8DE5E56A8C9E65D8845 /* Pinblock.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5411456AD2DEBC2DBB50FECD5E7F15 /* Pinblock.swift */; };
+		8094A26E2F1315CF319667FD3B5DDFB6 /* HMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740224741E3A2822D1A1AC1FE2D7B9E4 /* HMAC.swift */; };
+		9C6DACA7CB96C0610E0B8B496F388B80 /* IDZSwiftCommonCrypto.h in Headers */ = {isa = PBXBuildFile; fileRef = D3463DCF5292E2D42142AFA48BE145DC /* IDZSwiftCommonCrypto.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9E3DEF1A6BAC121311F388B53BB31D8C /* KeystoneCrypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3C640277A646C7BE528E660A6E9E46 /* KeystoneCrypto.swift */; };
+		A3DA2D86674F5BBB2251F04DA791DA1D /* KeyDerivation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFF2759836EADB6C4784F2C3DAFD28E /* KeyDerivation.swift */; };
+		AC4900A1AD184146FAB87FD3266072DC /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC71C4DBC739E2118EB7351936C0BCD9 /* Status.swift */; };
+		B225A37239536DA36864A193D6CFB838 /* Cryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F115C73E256D09560B49416F6A2FD234 /* Cryptor.swift */; };
+		B6316A9B99458DD42DC957DE8976917D /* Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8B76A7B4A9DE002DA7D5286CB3AE6F /* Crypto.swift */; };
+		B709F19B384D8116189E944DFF500DEE /* IDZSwiftCommonCrypto-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7051BA3809E9C6175D37B38A57445937 /* IDZSwiftCommonCrypto-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D798B4B2504B4A7EF6D2913D3A593EE1 /* Pods-KeystoneCrypto_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E07F4DB9F811268B14B53A5A0FF3FF /* Pods-KeystoneCrypto_Example-dummy.m */; };
+		DCE5991651D1850089688708705827A9 /* KeystoneCrypto-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C8C8BBFB4CDAA70CD757E56AFB93DEAF /* KeystoneCrypto-dummy.m */; };
+		E49D022F9D3B17F6463F4F28FBEE1EF3 /* IDZSwiftCommonCrypto-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF0D757E29D9B80AAC87AF290D28330 /* IDZSwiftCommonCrypto-dummy.m */; };
+		ECB415F8B369C994D8DD7B6D5596A68D /* WrappedClientKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87192F05E1865FD7B1039BB9F964D4C1 /* WrappedClientKey.swift */; };
+		F46DB3DA54C0C5C5463D3245875EBA4D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		FD6D56E07A12981BF6D61F26EF2449BA /* Digest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC3C3E1DA6A28A1D022C39F5C216A43 /* Digest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3A3E3BFCF3C1F1AB5531C76DEE7C0124 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E62DFEE38EEB0F91D090E42121B93548;
-			remoteInfo = KeystoneCrypto;
-		};
-		3F79B216496058639874EDABAF4E5F12 /* PBXContainerItemProxy */ = {
+		5CDB3BC058669EDB27E7B1143376A501 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 637DAC3D3B33C9E6E2E5BE0D93195855;
 			remoteInfo = IDZSwiftCommonCrypto;
 		};
-		53984E9B7D132AEE006493E296942DEF /* PBXContainerItemProxy */ = {
+		690F3733F3A7ACBA0638B9FE203F38B7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = BF96069813580174C490F2849982A4F6;
 			remoteInfo = "Pods-KeystoneCrypto_Example";
 		};
-		EEC930071945C2F6515B065643B98DCE /* PBXContainerItemProxy */ = {
+		C7F667A505A06855DDE6604FF71FFFCA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E62DFEE38EEB0F91D090E42121B93548;
+			remoteInfo = KeystoneCrypto;
+		};
+		F1601A6C2E39E5ADD8E0055187ADD942 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -71,146 +73,119 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		039B84CA049389292554FB33380E16EE /* KeystoneCrypto-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KeystoneCrypto-umbrella.h"; sourceTree = "<group>"; };
 		043D634B5E1F1DC892695C6F65D81571 /* Pods-KeystoneCrypto_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KeystoneCrypto_Example-Info.plist"; sourceTree = "<group>"; };
 		08533339F501A80DE7E2F21A73370A32 /* Pods-KeystoneCrypto_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KeystoneCrypto_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		0E24EFD6B0820B6DAF243276BC4FF27B /* Pods_KeystoneCrypto_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_KeystoneCrypto_Example.framework; path = "Pods-KeystoneCrypto_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0EC3EEA19AFE9ABA099CCAF705E2FF09 /* KeyDerivation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyDerivation.swift; path = IDZSwiftCommonCrypto/KeyDerivation.swift; sourceTree = "<group>"; };
-		0F9A953CF64C62DAD59664358F4A2DC6 /* LocalKey.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LocalKey.swift; sourceTree = "<group>"; };
+		0E24EFD6B0820B6DAF243276BC4FF27B /* Pods-KeystoneCrypto_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-KeystoneCrypto_Example"; path = Pods_KeystoneCrypto_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E8B76A7B4A9DE002DA7D5286CB3AE6F /* Crypto.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Crypto.swift; path = IDZSwiftCommonCrypto/Crypto.swift; sourceTree = "<group>"; };
+		0EC3C3E1DA6A28A1D022C39F5C216A43 /* Digest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Digest.swift; path = IDZSwiftCommonCrypto/Digest.swift; sourceTree = "<group>"; };
+		1832C2E506FC5B1EF06E118DB75EAC7D /* KeystoneException.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = KeystoneException.swift; sourceTree = "<group>"; };
 		1A307059DF0E60A8FCD901B66B4FDE2D /* Pods-KeystoneCrypto_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-KeystoneCrypto_Tests.modulemap"; sourceTree = "<group>"; };
-		1D3E8425266149EC678CD98F188E1BA8 /* IDZSwiftCommonCrypto.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IDZSwiftCommonCrypto.h; path = IDZSwiftCommonCrypto/IDZSwiftCommonCrypto.h; sourceTree = "<group>"; };
-		2531F5BDB4AA34F0B523D150CB9EE5EE /* KeystoneCrypto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = KeystoneCrypto.framework; path = KeystoneCrypto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B76F1109E5EAF97542B772DBF7E19EB /* Random.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Random.swift; path = IDZSwiftCommonCrypto/Random.swift; sourceTree = "<group>"; };
+		2531F5BDB4AA34F0B523D150CB9EE5EE /* KeystoneCrypto */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = KeystoneCrypto; path = KeystoneCrypto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A77EAB30FF32396C9FA5B750560AAF3 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		2CCDA0E0F0A6656E3F19D34F6A2CEF9A /* StreamCryptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StreamCryptor.swift; path = IDZSwiftCommonCrypto/StreamCryptor.swift; sourceTree = "<group>"; };
+		2D9E9E5227CEAEF05793AE0400959BEB /* OneTimeKey.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OneTimeKey.swift; sourceTree = "<group>"; };
 		2E104F06ED89A1E299387C7E7E460EF3 /* Pods-KeystoneCrypto_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-KeystoneCrypto_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		3326275D2C2F8CA3B9C418FE1EB7C4C9 /* Pods-KeystoneCrypto_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KeystoneCrypto_Example.release.xcconfig"; sourceTree = "<group>"; };
 		353233422DE76AB16BF5A42CF6E2F508 /* Pods-KeystoneCrypto_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-KeystoneCrypto_Example.modulemap"; sourceTree = "<group>"; };
-		393D8ACD38DD3418D34DB7235479E03E /* Utilities.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Utilities.swift; path = IDZSwiftCommonCrypto/Utilities.swift; sourceTree = "<group>"; };
-		45A0E1D47D860F47D35B6B1EA97E0068 /* KeystoneCrypto.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KeystoneCrypto.xcconfig; sourceTree = "<group>"; };
-		45B51D26D468F7CB6712BEAE24BA75CC /* IDZSwiftCommonCrypto.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = IDZSwiftCommonCrypto.xcconfig; sourceTree = "<group>"; };
+		45AE9D09EDCD8D371D8464C554771CE1 /* IDZSwiftCommonCrypto.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = IDZSwiftCommonCrypto.modulemap; sourceTree = "<group>"; };
+		493652759844B585C9E673E0D5450A84 /* EncryptedData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EncryptedData.swift; sourceTree = "<group>"; };
 		4A027B0E20559034A5A13BF793FBBEA5 /* Pods-KeystoneCrypto_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KeystoneCrypto_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		5146DEA331ADF48D6FD0976ABBED5FED /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		51B24E42243ADFDB268983216E9EFA34 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		4B2F18DE55CB5EF67C1FBE0FAF8C35A6 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		4C3C640277A646C7BE528E660A6E9E46 /* KeystoneCrypto.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = KeystoneCrypto.swift; sourceTree = "<group>"; };
+		4F1F1A05F7E8605420EE75A94A161B30 /* KeystoneCrypto.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = KeystoneCrypto.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		4F5AA330797FD43527AAAEFB9369B38A /* KeystoneCrypto.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KeystoneCrypto.debug.xcconfig; sourceTree = "<group>"; };
 		548813DE088F032D531FE963A138E6AE /* Pods-KeystoneCrypto_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-KeystoneCrypto_Tests-umbrella.h"; sourceTree = "<group>"; };
-		5C4297958894AC87FA005927521C8733 /* KeystoneCrypto.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = KeystoneCrypto.modulemap; sourceTree = "<group>"; };
-		63F3974241325201D5C5C8E8D97A7F15 /* Pinblock.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Pinblock.swift; sourceTree = "<group>"; };
-		690471CB2FC22742B36F86158DDE1084 /* Digest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Digest.swift; path = IDZSwiftCommonCrypto/Digest.swift; sourceTree = "<group>"; };
+		60308B7F46E5DFDF398C062B67607BAD /* site.css */ = {isa = PBXFileReference; includeInIndex = 1; name = site.css; path = Docs/css/site.css; sourceTree = "<group>"; };
+		6AF0D757E29D9B80AAC87AF290D28330 /* IDZSwiftCommonCrypto-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "IDZSwiftCommonCrypto-dummy.m"; sourceTree = "<group>"; };
 		6C90D40EA8A9DB71736A9AC4488EF45E /* Pods-KeystoneCrypto_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KeystoneCrypto_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		7186E420528B359BE66A1AEAEE5DAE2E /* Updateable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Updateable.swift; path = IDZSwiftCommonCrypto/Updateable.swift; sourceTree = "<group>"; };
+		7051BA3809E9C6175D37B38A57445937 /* IDZSwiftCommonCrypto-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IDZSwiftCommonCrypto-umbrella.h"; sourceTree = "<group>"; };
+		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		7387A2D2BF92513423D5CC7347DBE21D /* Pods-KeystoneCrypto_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-KeystoneCrypto_Example-umbrella.h"; sourceTree = "<group>"; };
-		77A467C0360161248E9D103B1B7FEC27 /* OneTimeKey.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OneTimeKey.swift; sourceTree = "<group>"; };
-		78EAC8C056FA5A3412F2DF1FFF600944 /* StreamCryptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StreamCryptor.swift; path = IDZSwiftCommonCrypto/StreamCryptor.swift; sourceTree = "<group>"; };
-		84A0B24BD2ECF070EE9FFECF420A4226 /* Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		90D267FDDCB56E0217DA9DB116D1E8A6 /* Pods_KeystoneCrypto_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_KeystoneCrypto_Tests.framework; path = "Pods-KeystoneCrypto_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		92393B5044FDE26C0B38B7B82A932D59 /* Cryptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Cryptor.swift; path = IDZSwiftCommonCrypto/Cryptor.swift; sourceTree = "<group>"; };
-		924F2E7E2BA06CDD9608DC2392B5E1BE /* Status.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Status.swift; path = IDZSwiftCommonCrypto/Status.swift; sourceTree = "<group>"; };
-		9253CFAA783F9510C62E3A1C4623068F /* IDZSwiftCommonCrypto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IDZSwiftCommonCrypto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		740224741E3A2822D1A1AC1FE2D7B9E4 /* HMAC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HMAC.swift; path = IDZSwiftCommonCrypto/HMAC.swift; sourceTree = "<group>"; };
+		7DB5A46957A517CD36E597601572C0A1 /* Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		7FC3076DB5E64DBCB984451B1D276E9B /* KeystoneCrypto-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KeystoneCrypto-prefix.pch"; sourceTree = "<group>"; };
+		82E99FA197D9259397BD3DCD3EC4BE78 /* IDZSwiftCommonCrypto-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IDZSwiftCommonCrypto-prefix.pch"; sourceTree = "<group>"; };
+		86A4CB0278DC28463C0351F76D0209C8 /* WrappedData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WrappedData.swift; sourceTree = "<group>"; };
+		87192F05E1865FD7B1039BB9F964D4C1 /* WrappedClientKey.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WrappedClientKey.swift; sourceTree = "<group>"; };
+		90D267FDDCB56E0217DA9DB116D1E8A6 /* Pods-KeystoneCrypto_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-KeystoneCrypto_Tests"; path = Pods_KeystoneCrypto_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		925CCC6A9165E0B92B2D85FAF7F6AE90 /* Pods-KeystoneCrypto_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-KeystoneCrypto_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		94406613723F07EF8C51DA6EEAA663A8 /* KeystoneCrypto-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KeystoneCrypto-prefix.pch"; sourceTree = "<group>"; };
-		976C66317FFD0B38E73DBA1A9CE34148 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		9827FB475A91B42E211055F6712215B7 /* Pods-KeystoneCrypto_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KeystoneCrypto_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		99A9D549D20F440E2E74B730A16BE84D /* KeystoneCrypto.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = KeystoneCrypto.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9AB73CC8ADE604C78943147E63B20731 /* HMAC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HMAC.swift; path = IDZSwiftCommonCrypto/HMAC.swift; sourceTree = "<group>"; };
-		9D44D8457ED934FD8659E5026C4B83EA /* Random.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Random.swift; path = IDZSwiftCommonCrypto/Random.swift; sourceTree = "<group>"; };
+		98888D7A4346F5E214B9186B2513D71A /* added-icon.svg */ = {isa = PBXFileReference; includeInIndex = 1; name = "added-icon.svg"; path = "Docs/img/added-icon.svg"; sourceTree = "<group>"; };
+		98AE38C7735692484008CC6CAC9F817C /* Updateable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Updateable.swift; path = IDZSwiftCommonCrypto/Updateable.swift; sourceTree = "<group>"; };
+		9BFF2759836EADB6C4784F2C3DAFD28E /* KeyDerivation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyDerivation.swift; path = IDZSwiftCommonCrypto/KeyDerivation.swift; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A10AC4A91CFF5377C2093F1DD221E9D8 /* IDZSwiftCommonCrypto-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "IDZSwiftCommonCrypto-Info.plist"; sourceTree = "<group>"; };
-		AA8D5280156307E3E7D5F7D35D3EA49D /* IDZSwiftCommonCrypto-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IDZSwiftCommonCrypto-prefix.pch"; sourceTree = "<group>"; };
-		AB16774FD913C0A1C31F80D21466317F /* IDZSwiftCommonCrypto-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IDZSwiftCommonCrypto-umbrella.h"; sourceTree = "<group>"; };
-		ABFBFEDD5147481D3A76D7AC0C8B4465 /* Crypto.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Crypto.swift; path = IDZSwiftCommonCrypto/Crypto.swift; sourceTree = "<group>"; };
-		BB9D3311E024419AF6A37565759D9BD2 /* KeystoneCrypto-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KeystoneCrypto-umbrella.h"; sourceTree = "<group>"; };
+		A979424CC23D00563301F648346D488D /* IDZSwiftCommonCrypto-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "IDZSwiftCommonCrypto-Info.plist"; sourceTree = "<group>"; };
+		A9D404B0EFF809C8BF5FDB2DEDBC82C5 /* Utilities.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Utilities.swift; path = IDZSwiftCommonCrypto/Utilities.swift; sourceTree = "<group>"; };
+		AD1E7398FFFC3FC84F59E50FA4244A0A /* index.html */ = {isa = PBXFileReference; includeInIndex = 1; name = index.html; path = Docs/documentation/keystonecrypto/keystonecrypto/index.html; sourceTree = "<group>"; };
+		AD5411456AD2DEBC2DBB50FECD5E7F15 /* Pinblock.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Pinblock.swift; sourceTree = "<group>"; };
+		B63BAC1140D8F08AF6663C03A7A9707E /* favicon.ico */ = {isa = PBXFileReference; includeInIndex = 1; name = favicon.ico; path = Docs/favicon.ico; sourceTree = "<group>"; };
+		B65F3D44BD80F8077073C12B8E6DA635 /* modified-icon.svg */ = {isa = PBXFileReference; includeInIndex = 1; name = "modified-icon.svg"; path = "Docs/img/modified-icon.svg"; sourceTree = "<group>"; };
 		BEE98731A402899CE7F0E1046849FE7E /* Pods-KeystoneCrypto_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-KeystoneCrypto_Example-frameworks.sh"; sourceTree = "<group>"; };
+		BF5E8F2499E5493F43D95520A8641311 /* KeystoneCrypto.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = KeystoneCrypto.modulemap; sourceTree = "<group>"; };
+		C15CE02151FF06BBF0B6648089DB468A /* IDZSwiftCommonCrypto.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = IDZSwiftCommonCrypto.debug.xcconfig; sourceTree = "<group>"; };
+		C8C8BBFB4CDAA70CD757E56AFB93DEAF /* KeystoneCrypto-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KeystoneCrypto-dummy.m"; sourceTree = "<group>"; };
 		C9E07F4DB9F811268B14B53A5A0FF3FF /* Pods-KeystoneCrypto_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-KeystoneCrypto_Example-dummy.m"; sourceTree = "<group>"; };
-		D490601EFE62ACBFAED834DB4662C883 /* IDZSwiftCommonCrypto.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = IDZSwiftCommonCrypto.modulemap; sourceTree = "<group>"; };
+		CBF3558643E30F770384B2B6C331EF93 /* favicon.svg */ = {isa = PBXFileReference; includeInIndex = 1; name = favicon.svg; path = Docs/favicon.svg; sourceTree = "<group>"; };
+		D3463DCF5292E2D42142AFA48BE145DC /* IDZSwiftCommonCrypto.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IDZSwiftCommonCrypto.h; path = IDZSwiftCommonCrypto/IDZSwiftCommonCrypto.h; sourceTree = "<group>"; };
+		D3A82801CA4CE026425B3330C0B49B1F /* KeystoneCrypto.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KeystoneCrypto.release.xcconfig; sourceTree = "<group>"; };
 		D7329D0D6D0760C3524D67560B695F7F /* Pods-KeystoneCrypto_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KeystoneCrypto_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		D86854E0C7BAB7FC3CDC73BFC6F75FB7 /* Pods-KeystoneCrypto_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KeystoneCrypto_Tests-Info.plist"; sourceTree = "<group>"; };
-		DF2E8B7E7BB0A99D45C003918B9145DA /* IDZSwiftCommonCrypto-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "IDZSwiftCommonCrypto-dummy.m"; sourceTree = "<group>"; };
-		E7545C6037DE849216C5D6A54C1BE8C4 /* KeystoneCrypto-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "KeystoneCrypto-Info.plist"; sourceTree = "<group>"; };
+		DEAA805EA1E79BC1F0165ADCF0FA2CF2 /* decryptpinblock(pinblock:key:).html */ = {isa = PBXFileReference; includeInIndex = 1; name = "decryptpinblock(pinblock:key:).html"; path = "Docs/documentation/keystonecrypto/keystonecrypto/decryptpinblock(pinblock:key:).html"; sourceTree = "<group>"; };
+		E0141E6EC128E43AF5626EEAC6A921ED /* KeystoneCrypto-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "KeystoneCrypto-Info.plist"; sourceTree = "<group>"; };
+		E6C541709E754103925A16CC72626E43 /* index.html */ = {isa = PBXFileReference; includeInIndex = 1; name = index.html; path = Docs/documentation/keystonecrypto/index.html; sourceTree = "<group>"; };
+		E8D52FB1023F79A37873D318899EE91F /* LocalKey.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LocalKey.swift; sourceTree = "<group>"; };
+		EF8DCC962D511FD1CB35F68F88184A2B /* IDZSwiftCommonCrypto.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = IDZSwiftCommonCrypto.release.xcconfig; sourceTree = "<group>"; };
+		F115C73E256D09560B49416F6A2FD234 /* Cryptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Cryptor.swift; path = IDZSwiftCommonCrypto/Cryptor.swift; sourceTree = "<group>"; };
 		F31F7B55B63C418B951CC33B80B2C2E8 /* Pods-KeystoneCrypto_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-KeystoneCrypto_Tests-dummy.m"; sourceTree = "<group>"; };
-		F646C0448F76E5EACEE88EE9FD717451 /* IDZSwiftCommonCrypto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = IDZSwiftCommonCrypto.framework; path = IDZSwiftCommonCrypto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F8B768B2623B6270ED69F915552CA40E /* KeystoneException.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = KeystoneException.swift; sourceTree = "<group>"; };
-		FD563C7EF2D28986F0471D86C9C399FE /* KeystoneCrypto-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KeystoneCrypto-dummy.m"; sourceTree = "<group>"; };
-		FEB2577932EED1E35E53E54C00914C50 /* KeystoneCrypto.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = KeystoneCrypto.swift; sourceTree = "<group>"; };
+		F646C0448F76E5EACEE88EE9FD717451 /* IDZSwiftCommonCrypto */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = IDZSwiftCommonCrypto; path = IDZSwiftCommonCrypto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7FCC82F438A9980936F2749350229D4 /* encryptpin(pin:key:pan:).html */ = {isa = PBXFileReference; includeInIndex = 1; name = "encryptpin(pin:key:pan:).html"; path = "Docs/documentation/keystonecrypto/keystonecrypto/encryptpin(pin:key:pan:).html"; sourceTree = "<group>"; };
+		F8567C7DC7BE7275498B9A37F0787C2A /* generatelocalkey(otk:keytype:).html */ = {isa = PBXFileReference; includeInIndex = 1; name = "generatelocalkey(otk:keytype:).html"; path = "Docs/documentation/keystonecrypto/keystonecrypto/generatelocalkey(otk:keytype:).html"; sourceTree = "<group>"; };
+		FB8865003C30C71924D2BD0BBB5F875C /* deprecated-icon.svg */ = {isa = PBXFileReference; includeInIndex = 1; name = "deprecated-icon.svg"; path = "Docs/img/deprecated-icon.svg"; sourceTree = "<group>"; };
+		FC71C4DBC739E2118EB7351936C0BCD9 /* Status.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Status.swift; path = IDZSwiftCommonCrypto/Status.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2C52419812B6A8C20DEF42ADC41E53D1 /* Frameworks */ = {
+		26EC888186F6F280EFBAFF72DC62F337 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				939975641DC10C8823502EA163E1310D /* Foundation.framework in Frameworks */,
+				0C6669BF552B68DD470920F13D44A2E6 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		34568E45907A334F8356C32144FD7FC3 /* Frameworks */ = {
+		5EED07B1A9ABE3F150EA8F2614B56024 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3E01F2F5CE4A4F4C00E22C25AB431493 /* Foundation.framework in Frameworks */,
-				F14C42030FE41B62B53508C74403E6D2 /* IDZSwiftCommonCrypto.framework in Frameworks */,
+				4E45F286EF400DFEC0ED0EB3EC3B44B6 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4FCCC54A2B5FBDFE2DD9ACCF1F373045 /* Frameworks */ = {
+		7EBF28F82482FA44BD3C972788814107 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E92B60D28F1CABCE755FCB200A28FFB /* Foundation.framework in Frameworks */,
+				F46DB3DA54C0C5C5463D3245875EBA4D /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D4A74A4C7D0EAE24C19828230F569D81 /* Frameworks */ = {
+		889AB523BDC1CB2AE90C0B017B4CE13B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9864DC4F08630FCC23B11459F2C60EB2 /* Foundation.framework in Frameworks */,
+				299BB11DBAB3148320FDC5F2818352BD /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1441E7E14425EC21DCE0DDA4DB57EED8 /* Framework Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				84A0B24BD2ECF070EE9FFECF420A4226 /* Extensions.swift */,
-			);
-			name = "Framework Extensions";
-			path = "KeystoneCrypto/Classes/Framework Extensions";
-			sourceTree = "<group>";
-		};
-		1EB4567162349309B4C6605F7A0EEE69 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				9253CFAA783F9510C62E3A1C4623068F /* IDZSwiftCommonCrypto.framework */,
-				CDD75C8AE8737C9E3B9449A4E3AC7103 /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		23D322D45FC9E5442B62C250AE06EE81 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				F646C0448F76E5EACEE88EE9FD717451 /* IDZSwiftCommonCrypto.framework */,
-				2531F5BDB4AA34F0B523D150CB9EE5EE /* KeystoneCrypto.framework */,
-				0E24EFD6B0820B6DAF243276BC4FF27B /* Pods_KeystoneCrypto_Example.framework */,
-				90D267FDDCB56E0217DA9DB116D1E8A6 /* Pods_KeystoneCrypto_Tests.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		29248CFB14A7E398320CAB9A417C1FF3 /* Crypto */ = {
-			isa = PBXGroup;
-			children = (
-				FEB2577932EED1E35E53E54C00914C50 /* KeystoneCrypto.swift */,
-				0F9A953CF64C62DAD59664358F4A2DC6 /* LocalKey.swift */,
-				77A467C0360161248E9D103B1B7FEC27 /* OneTimeKey.swift */,
-				63F3974241325201D5C5C8E8D97A7F15 /* Pinblock.swift */,
-			);
-			name = Crypto;
-			path = KeystoneCrypto/Classes/Crypto;
-			sourceTree = "<group>";
-		};
 		3A22EC4C5E974BD45CF89A5591FD10E6 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				C5886F18907A3C30D3A8D108B86207D5 /* IDZSwiftCommonCrypto */,
+				CF4406DC98FED977B87B43ACC2E5E0E5 /* IDZSwiftCommonCrypto */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -232,12 +207,98 @@
 			path = "Target Support Files/Pods-KeystoneCrypto_Example";
 			sourceTree = "<group>";
 		};
+		559C1A177701F93B1820615D221AA0AF /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BF5E8F2499E5493F43D95520A8641311 /* KeystoneCrypto.modulemap */,
+				C8C8BBFB4CDAA70CD757E56AFB93DEAF /* KeystoneCrypto-dummy.m */,
+				E0141E6EC128E43AF5626EEAC6A921ED /* KeystoneCrypto-Info.plist */,
+				7FC3076DB5E64DBCB984451B1D276E9B /* KeystoneCrypto-prefix.pch */,
+				039B84CA049389292554FB33380E16EE /* KeystoneCrypto-umbrella.h */,
+				4F5AA330797FD43527AAAEFB9369B38A /* KeystoneCrypto.debug.xcconfig */,
+				D3A82801CA4CE026425B3330C0B49B1F /* KeystoneCrypto.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/KeystoneCrypto";
+			sourceTree = "<group>";
+		};
+		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
 		62D65411557EA4FB5E9463DF5DCF50E6 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E92872FB2D0BE4AE17BC5241BC096AA8 /* KeystoneCrypto */,
+				65D99CA8B826A0B12CE381746B8D6EC6 /* KeystoneCrypto */,
 			);
 			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		65D99CA8B826A0B12CE381746B8D6EC6 /* KeystoneCrypto */ = {
+			isa = PBXGroup;
+			children = (
+				95AF41462A3E3505AA27212ED452E74E /* Crypto */,
+				91ACD0999C3CEEAC20683E284559EFDB /* Exceptions */,
+				A6759AA248C808D8CCC4ED70BDAC78F1 /* Framework Extensions */,
+				AEA99721B238C6B5D67AD22A9349847F /* Pod */,
+				559C1A177701F93B1820615D221AA0AF /* Support Files */,
+			);
+			name = KeystoneCrypto;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		9073890A0C17CED2BBAD249AC9EBC910 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F646C0448F76E5EACEE88EE9FD717451 /* IDZSwiftCommonCrypto */,
+				2531F5BDB4AA34F0B523D150CB9EE5EE /* KeystoneCrypto */,
+				0E24EFD6B0820B6DAF243276BC4FF27B /* Pods-KeystoneCrypto_Example */,
+				90D267FDDCB56E0217DA9DB116D1E8A6 /* Pods-KeystoneCrypto_Tests */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		91ACD0999C3CEEAC20683E284559EFDB /* Exceptions */ = {
+			isa = PBXGroup;
+			children = (
+				1832C2E506FC5B1EF06E118DB75EAC7D /* KeystoneException.swift */,
+			);
+			name = Exceptions;
+			path = KeystoneCrypto/Classes/Exceptions;
+			sourceTree = "<group>";
+		};
+		95AF41462A3E3505AA27212ED452E74E /* Crypto */ = {
+			isa = PBXGroup;
+			children = (
+				493652759844B585C9E673E0D5450A84 /* EncryptedData.swift */,
+				4C3C640277A646C7BE528E660A6E9E46 /* KeystoneCrypto.swift */,
+				E8D52FB1023F79A37873D318899EE91F /* LocalKey.swift */,
+				2D9E9E5227CEAEF05793AE0400959BEB /* OneTimeKey.swift */,
+				AD5411456AD2DEBC2DBB50FECD5E7F15 /* Pinblock.swift */,
+				87192F05E1865FD7B1039BB9F964D4C1 /* WrappedClientKey.swift */,
+				86A4CB0278DC28463C0351F76D0209C8 /* WrappedData.swift */,
+			);
+			name = Crypto;
+			path = KeystoneCrypto/Classes/Crypto;
+			sourceTree = "<group>";
+		};
+		9DA52AB9749D60EF1D53DDE187D89FC3 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				45AE9D09EDCD8D371D8464C554771CE1 /* IDZSwiftCommonCrypto.modulemap */,
+				6AF0D757E29D9B80AAC87AF290D28330 /* IDZSwiftCommonCrypto-dummy.m */,
+				A979424CC23D00563301F648346D488D /* IDZSwiftCommonCrypto-Info.plist */,
+				82E99FA197D9259397BD3DCD3EC4BE78 /* IDZSwiftCommonCrypto-prefix.pch */,
+				7051BA3809E9C6175D37B38A57445937 /* IDZSwiftCommonCrypto-umbrella.h */,
+				C15CE02151FF06BBF0B6648089DB468A /* IDZSwiftCommonCrypto.debug.xcconfig */,
+				EF8DCC962D511FD1CB35F68F88184A2B /* IDZSwiftCommonCrypto.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/IDZSwiftCommonCrypto";
 			sourceTree = "<group>";
 		};
 		A2F4CCBC62344481910BD98908AD321E /* Targets Support Files */ = {
@@ -249,56 +310,34 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		AE4C79A26F804B2BFB9E644E4EFE1EFA /* Support Files */ = {
+		A6759AA248C808D8CCC4ED70BDAC78F1 /* Framework Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				D490601EFE62ACBFAED834DB4662C883 /* IDZSwiftCommonCrypto.modulemap */,
-				45B51D26D468F7CB6712BEAE24BA75CC /* IDZSwiftCommonCrypto.xcconfig */,
-				DF2E8B7E7BB0A99D45C003918B9145DA /* IDZSwiftCommonCrypto-dummy.m */,
-				A10AC4A91CFF5377C2093F1DD221E9D8 /* IDZSwiftCommonCrypto-Info.plist */,
-				AA8D5280156307E3E7D5F7D35D3EA49D /* IDZSwiftCommonCrypto-prefix.pch */,
-				AB16774FD913C0A1C31F80D21466317F /* IDZSwiftCommonCrypto-umbrella.h */,
+				7DB5A46957A517CD36E597601572C0A1 /* Extensions.swift */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/IDZSwiftCommonCrypto";
+			name = "Framework Extensions";
+			path = "KeystoneCrypto/Classes/Framework Extensions";
 			sourceTree = "<group>";
 		};
-		C4826964FD2B3AADD71A2BAD695FD522 /* Pod */ = {
+		AEA99721B238C6B5D67AD22A9349847F /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				99A9D549D20F440E2E74B730A16BE84D /* KeystoneCrypto.podspec */,
-				51B24E42243ADFDB268983216E9EFA34 /* LICENSE */,
-				5146DEA331ADF48D6FD0976ABBED5FED /* README.md */,
+				98888D7A4346F5E214B9186B2513D71A /* added-icon.svg */,
+				DEAA805EA1E79BC1F0165ADCF0FA2CF2 /* decryptpinblock(pinblock:key:).html */,
+				FB8865003C30C71924D2BD0BBB5F875C /* deprecated-icon.svg */,
+				F7FCC82F438A9980936F2749350229D4 /* encryptpin(pin:key:pan:).html */,
+				B63BAC1140D8F08AF6663C03A7A9707E /* favicon.ico */,
+				CBF3558643E30F770384B2B6C331EF93 /* favicon.svg */,
+				F8567C7DC7BE7275498B9A37F0787C2A /* generatelocalkey(otk:keytype:).html */,
+				E6C541709E754103925A16CC72626E43 /* index.html */,
+				AD1E7398FFFC3FC84F59E50FA4244A0A /* index.html */,
+				4F1F1A05F7E8605420EE75A94A161B30 /* KeystoneCrypto.podspec */,
+				4B2F18DE55CB5EF67C1FBE0FAF8C35A6 /* LICENSE */,
+				B65F3D44BD80F8077073C12B8E6DA635 /* modified-icon.svg */,
+				2A77EAB30FF32396C9FA5B750560AAF3 /* README.md */,
+				60308B7F46E5DFDF398C062B67607BAD /* site.css */,
 			);
 			name = Pod;
-			sourceTree = "<group>";
-		};
-		C5886F18907A3C30D3A8D108B86207D5 /* IDZSwiftCommonCrypto */ = {
-			isa = PBXGroup;
-			children = (
-				ABFBFEDD5147481D3A76D7AC0C8B4465 /* Crypto.swift */,
-				92393B5044FDE26C0B38B7B82A932D59 /* Cryptor.swift */,
-				690471CB2FC22742B36F86158DDE1084 /* Digest.swift */,
-				9AB73CC8ADE604C78943147E63B20731 /* HMAC.swift */,
-				1D3E8425266149EC678CD98F188E1BA8 /* IDZSwiftCommonCrypto.h */,
-				0EC3EEA19AFE9ABA099CCAF705E2FF09 /* KeyDerivation.swift */,
-				9D44D8457ED934FD8659E5026C4B83EA /* Random.swift */,
-				924F2E7E2BA06CDD9608DC2392B5E1BE /* Status.swift */,
-				78EAC8C056FA5A3412F2DF1FFF600944 /* StreamCryptor.swift */,
-				7186E420528B359BE66A1AEAEE5DAE2E /* Updateable.swift */,
-				393D8ACD38DD3418D34DB7235479E03E /* Utilities.swift */,
-				AE4C79A26F804B2BFB9E644E4EFE1EFA /* Support Files */,
-			);
-			name = IDZSwiftCommonCrypto;
-			path = IDZSwiftCommonCrypto;
-			sourceTree = "<group>";
-		};
-		CDD75C8AE8737C9E3B9449A4E3AC7103 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				976C66317FFD0B38E73DBA1A9CE34148 /* Foundation.framework */,
-			);
-			name = iOS;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -306,47 +345,39 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				62D65411557EA4FB5E9463DF5DCF50E6 /* Development Pods */,
-				1EB4567162349309B4C6605F7A0EEE69 /* Frameworks */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
 				3A22EC4C5E974BD45CF89A5591FD10E6 /* Pods */,
-				23D322D45FC9E5442B62C250AE06EE81 /* Products */,
+				9073890A0C17CED2BBAD249AC9EBC910 /* Products */,
 				A2F4CCBC62344481910BD98908AD321E /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		DD9CFD9C6921280A6C950C380B35C243 /* Exceptions */ = {
+		CF4406DC98FED977B87B43ACC2E5E0E5 /* IDZSwiftCommonCrypto */ = {
 			isa = PBXGroup;
 			children = (
-				F8B768B2623B6270ED69F915552CA40E /* KeystoneException.swift */,
+				0E8B76A7B4A9DE002DA7D5286CB3AE6F /* Crypto.swift */,
+				F115C73E256D09560B49416F6A2FD234 /* Cryptor.swift */,
+				0EC3C3E1DA6A28A1D022C39F5C216A43 /* Digest.swift */,
+				740224741E3A2822D1A1AC1FE2D7B9E4 /* HMAC.swift */,
+				D3463DCF5292E2D42142AFA48BE145DC /* IDZSwiftCommonCrypto.h */,
+				9BFF2759836EADB6C4784F2C3DAFD28E /* KeyDerivation.swift */,
+				1B76F1109E5EAF97542B772DBF7E19EB /* Random.swift */,
+				FC71C4DBC739E2118EB7351936C0BCD9 /* Status.swift */,
+				2CCDA0E0F0A6656E3F19D34F6A2CEF9A /* StreamCryptor.swift */,
+				98AE38C7735692484008CC6CAC9F817C /* Updateable.swift */,
+				A9D404B0EFF809C8BF5FDB2DEDBC82C5 /* Utilities.swift */,
+				9DA52AB9749D60EF1D53DDE187D89FC3 /* Support Files */,
 			);
-			name = Exceptions;
-			path = KeystoneCrypto/Classes/Exceptions;
+			name = IDZSwiftCommonCrypto;
+			path = IDZSwiftCommonCrypto;
 			sourceTree = "<group>";
 		};
-		E92872FB2D0BE4AE17BC5241BC096AA8 /* KeystoneCrypto */ = {
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				29248CFB14A7E398320CAB9A417C1FF3 /* Crypto */,
-				DD9CFD9C6921280A6C950C380B35C243 /* Exceptions */,
-				1441E7E14425EC21DCE0DDA4DB57EED8 /* Framework Extensions */,
-				C4826964FD2B3AADD71A2BAD695FD522 /* Pod */,
-				ECDBE935DF377611FF21EA9F91A7369D /* Support Files */,
+				578452D2E740E91742655AC8F1636D1F /* iOS */,
 			);
-			name = KeystoneCrypto;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		ECDBE935DF377611FF21EA9F91A7369D /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				5C4297958894AC87FA005927521C8733 /* KeystoneCrypto.modulemap */,
-				45A0E1D47D860F47D35B6B1EA97E0068 /* KeystoneCrypto.xcconfig */,
-				FD563C7EF2D28986F0471D86C9C399FE /* KeystoneCrypto-dummy.m */,
-				E7545C6037DE849216C5D6A54C1BE8C4 /* KeystoneCrypto-Info.plist */,
-				94406613723F07EF8C51DA6EEAA663A8 /* KeystoneCrypto-prefix.pch */,
-				BB9D3311E024419AF6A37565759D9BD2 /* KeystoneCrypto-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/KeystoneCrypto";
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		EDCDD98E570AB61653648C7A88711DC4 /* Pods-KeystoneCrypto_Tests */ = {
@@ -368,36 +399,36 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		889BD06D6EA20454B36C4B4BED7A31D0 /* Headers */ = {
+		A7BC4C27A3AE994D2CAFB615419EDE26 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E593D6412D15E074FC8304B67B785B1 /* Pods-KeystoneCrypto_Tests-umbrella.h in Headers */,
+				2F0E84F4493822DEDF3BEBC7E0218C05 /* Pods-KeystoneCrypto_Tests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8FF8D19C6FC858C1437CBCC46AFF19E3 /* Headers */ = {
+		A90D7FF5E85B0F56EE220EB857182404 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2FE5A927C6146A560706AFE8C1068180 /* Pods-KeystoneCrypto_Example-umbrella.h in Headers */,
+				9C6DACA7CB96C0610E0B8B496F388B80 /* IDZSwiftCommonCrypto.h in Headers */,
+				B709F19B384D8116189E944DFF500DEE /* IDZSwiftCommonCrypto-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9563DBA25702B02B98B8A1CCFD966280 /* Headers */ = {
+		E47AE7E6F6B2F97B5C0D48995DBD7A04 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03D4A0F5E0A230A7069F8BF28ED10658 /* IDZSwiftCommonCrypto-umbrella.h in Headers */,
-				F280D8F4FE4554C40F2016334EB65DDC /* IDZSwiftCommonCrypto.h in Headers */,
+				3F214B62E08C8AE59DEAA4A5FBF70F1A /* Pods-KeystoneCrypto_Example-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B0480B4D61500755C23EB077B83B3180 /* Headers */ = {
+		EBB3EA791ADA66D4505FB3819C71FC8F /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46BDBB53A122C61BB57176EDC7B0867B /* KeystoneCrypto-umbrella.h in Headers */,
+				5521B6F9DBD2C287978D6E3F142E059C /* KeystoneCrypto-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,12 +437,12 @@
 /* Begin PBXNativeTarget section */
 		637DAC3D3B33C9E6E2E5BE0D93195855 /* IDZSwiftCommonCrypto */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C1C1C9709CD679F4E518F7AEBB214F41 /* Build configuration list for PBXNativeTarget "IDZSwiftCommonCrypto" */;
+			buildConfigurationList = 8DC69D4E8085C813821CC54D4CC91D76 /* Build configuration list for PBXNativeTarget "IDZSwiftCommonCrypto" */;
 			buildPhases = (
-				9563DBA25702B02B98B8A1CCFD966280 /* Headers */,
-				152C2BA6A0E15958C9E48D265FD064AE /* Sources */,
-				D4A74A4C7D0EAE24C19828230F569D81 /* Frameworks */,
-				92F32FE32EA8FEC1812A7BB1613B013F /* Resources */,
+				A90D7FF5E85B0F56EE220EB857182404 /* Headers */,
+				8E9379756708C68BF783BF61C83FFEE1 /* Sources */,
+				5EED07B1A9ABE3F150EA8F2614B56024 /* Frameworks */,
+				53D0CD6CEE191F8669FF04966E7EB2A7 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -419,65 +450,65 @@
 			);
 			name = IDZSwiftCommonCrypto;
 			productName = IDZSwiftCommonCrypto;
-			productReference = F646C0448F76E5EACEE88EE9FD717451 /* IDZSwiftCommonCrypto.framework */;
+			productReference = F646C0448F76E5EACEE88EE9FD717451 /* IDZSwiftCommonCrypto */;
 			productType = "com.apple.product-type.framework";
 		};
 		BF96069813580174C490F2849982A4F6 /* Pods-KeystoneCrypto_Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4638E19CA326258BBE540950157F08BF /* Build configuration list for PBXNativeTarget "Pods-KeystoneCrypto_Example" */;
+			buildConfigurationList = 01414886F2AD6EE14605B056FDBA9C87 /* Build configuration list for PBXNativeTarget "Pods-KeystoneCrypto_Example" */;
 			buildPhases = (
-				8FF8D19C6FC858C1437CBCC46AFF19E3 /* Headers */,
-				EE4B100F81B104EC56B33225E01F73A0 /* Sources */,
-				4FCCC54A2B5FBDFE2DD9ACCF1F373045 /* Frameworks */,
-				86E46A6C2D47ABBE1AB55FBCF52F3CEC /* Resources */,
+				E47AE7E6F6B2F97B5C0D48995DBD7A04 /* Headers */,
+				DCB3120A42F130A317EFB6BF11E1499B /* Sources */,
+				7EBF28F82482FA44BD3C972788814107 /* Frameworks */,
+				659AF4ECFEC7B97F7579997D20CE4055 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				F3095FB6A45B55638ECE9513C3FD2F09 /* PBXTargetDependency */,
-				026A21C6C13508E4555CF24B73F88E06 /* PBXTargetDependency */,
+				12E5B04C4E5BF68734D3F147B2BEECED /* PBXTargetDependency */,
+				047EA8D70A45FDDBC34EC75FA25FFFC4 /* PBXTargetDependency */,
 			);
 			name = "Pods-KeystoneCrypto_Example";
-			productName = "Pods-KeystoneCrypto_Example";
-			productReference = 0E24EFD6B0820B6DAF243276BC4FF27B /* Pods_KeystoneCrypto_Example.framework */;
+			productName = Pods_KeystoneCrypto_Example;
+			productReference = 0E24EFD6B0820B6DAF243276BC4FF27B /* Pods-KeystoneCrypto_Example */;
 			productType = "com.apple.product-type.framework";
 		};
 		C0013277E2274004ED1ACC9DBDCF2441 /* Pods-KeystoneCrypto_Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AFFBFF23E36982B09A893AC8359F2F0A /* Build configuration list for PBXNativeTarget "Pods-KeystoneCrypto_Tests" */;
+			buildConfigurationList = 108D9727ECBB8421D7F87AD8A8163F22 /* Build configuration list for PBXNativeTarget "Pods-KeystoneCrypto_Tests" */;
 			buildPhases = (
-				889BD06D6EA20454B36C4B4BED7A31D0 /* Headers */,
-				152F760255AB0FE76CCA69D0F9EE211E /* Sources */,
-				2C52419812B6A8C20DEF42ADC41E53D1 /* Frameworks */,
-				B50DECE03AB2D434C1FFBADA97D60D22 /* Resources */,
+				A7BC4C27A3AE994D2CAFB615419EDE26 /* Headers */,
+				4A106EFE572EAB79F7C95077E9E04570 /* Sources */,
+				26EC888186F6F280EFBAFF72DC62F337 /* Frameworks */,
+				B4E18EE17B8D87F6FE78066D458F5FC5 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				09749ED40AC39ECBBE84253FE6523F64 /* PBXTargetDependency */,
+				BB5EE989FDB4350CA99A716741E9E1DD /* PBXTargetDependency */,
 			);
 			name = "Pods-KeystoneCrypto_Tests";
-			productName = "Pods-KeystoneCrypto_Tests";
-			productReference = 90D267FDDCB56E0217DA9DB116D1E8A6 /* Pods_KeystoneCrypto_Tests.framework */;
+			productName = Pods_KeystoneCrypto_Tests;
+			productReference = 90D267FDDCB56E0217DA9DB116D1E8A6 /* Pods-KeystoneCrypto_Tests */;
 			productType = "com.apple.product-type.framework";
 		};
 		E62DFEE38EEB0F91D090E42121B93548 /* KeystoneCrypto */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B27E3737D8881205428277D808E58D2D /* Build configuration list for PBXNativeTarget "KeystoneCrypto" */;
+			buildConfigurationList = 0B89C6715AEC65404E00D02D335D7580 /* Build configuration list for PBXNativeTarget "KeystoneCrypto" */;
 			buildPhases = (
-				B0480B4D61500755C23EB077B83B3180 /* Headers */,
-				7A5D3B4D9D4CB7675FA2E85C8506111C /* Sources */,
-				34568E45907A334F8356C32144FD7FC3 /* Frameworks */,
-				91104A454E6F22200C9FC224AE10B426 /* Resources */,
+				EBB3EA791ADA66D4505FB3819C71FC8F /* Headers */,
+				88A3216E45F359841486CFD4253F5356 /* Sources */,
+				889AB523BDC1CB2AE90C0B017B4CE13B /* Frameworks */,
+				C3EB03D8353C517A157501987A80F427 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				883ECFF6758E8E7C510D7AFCA1B14A7D /* PBXTargetDependency */,
+				7FCCFC61F717DFC1260B758D73F444B0 /* PBXTargetDependency */,
 			);
 			name = KeystoneCrypto;
 			productName = KeystoneCrypto;
-			productReference = 2531F5BDB4AA34F0B523D150CB9EE5EE /* KeystoneCrypto.framework */;
+			productReference = 2531F5BDB4AA34F0B523D150CB9EE5EE /* KeystoneCrypto */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -486,18 +517,19 @@
 		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1100;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				Base,
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 23D322D45FC9E5442B62C250AE06EE81 /* Products */;
+			productRefGroup = 9073890A0C17CED2BBAD249AC9EBC910 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -510,28 +542,28 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		86E46A6C2D47ABBE1AB55FBCF52F3CEC /* Resources */ = {
+		53D0CD6CEE191F8669FF04966E7EB2A7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		91104A454E6F22200C9FC224AE10B426 /* Resources */ = {
+		659AF4ECFEC7B97F7579997D20CE4055 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		92F32FE32EA8FEC1812A7BB1613B013F /* Resources */ = {
+		B4E18EE17B8D87F6FE78066D458F5FC5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B50DECE03AB2D434C1FFBADA97D60D22 /* Resources */ = {
+		C3EB03D8353C517A157501987A80F427 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -541,184 +573,94 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		152C2BA6A0E15958C9E48D265FD064AE /* Sources */ = {
+		4A106EFE572EAB79F7C95077E9E04570 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1CFD39AF089C65E454BE6C58BE56228 /* Crypto.swift in Sources */,
-				933BAADFC3816CF5EE8CFBCC6BE4424C /* Cryptor.swift in Sources */,
-				F8A1ECE491BBFD57439F2E08BE0C4517 /* Digest.swift in Sources */,
-				75D530664023A484050EADD55877CD8B /* HMAC.swift in Sources */,
-				364808C7540F96122D1B16DA0EF4C969 /* IDZSwiftCommonCrypto-dummy.m in Sources */,
-				CC18E4DB49380E1FF368D3F9FFE39C71 /* KeyDerivation.swift in Sources */,
-				A5677E401214643A8B46A597833C8049 /* Random.swift in Sources */,
-				2E831A9886BDCF29B953F30383265714 /* Status.swift in Sources */,
-				14AD0547E38EAD0883299CCB9BB86D33 /* StreamCryptor.swift in Sources */,
-				EEBEDF0CB5F64E3A43E5A3D13F2AD317 /* Updateable.swift in Sources */,
-				DF3CD48EDD8167AA226E30C1CFF40FA0 /* Utilities.swift in Sources */,
+				6F09DF8E8DF7D4C9C1B10014ECF8F23C /* Pods-KeystoneCrypto_Tests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		152F760255AB0FE76CCA69D0F9EE211E /* Sources */ = {
+		88A3216E45F359841486CFD4253F5356 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D65300734807700F9BADBA44EB81A7F8 /* Pods-KeystoneCrypto_Tests-dummy.m in Sources */,
+				23549232EE1EA449A2D01F2DD7333AE4 /* EncryptedData.swift in Sources */,
+				3C7DE12D81F3DECABAFFC9003086E5F1 /* Extensions.swift in Sources */,
+				9E3DEF1A6BAC121311F388B53BB31D8C /* KeystoneCrypto.swift in Sources */,
+				DCE5991651D1850089688708705827A9 /* KeystoneCrypto-dummy.m in Sources */,
+				3C0715440B7FC6A3ED09FC52E711B9F8 /* KeystoneException.swift in Sources */,
+				567E1BA77A058C58DE3CB3A5C615D77F /* LocalKey.swift in Sources */,
+				3495526D7021C1E1A6FE3D459D1ED60B /* OneTimeKey.swift in Sources */,
+				7544C9402451C8DE5E56A8C9E65D8845 /* Pinblock.swift in Sources */,
+				ECB415F8B369C994D8DD7B6D5596A68D /* WrappedClientKey.swift in Sources */,
+				4903A10183B3070CFAB4F824A1D9CE4C /* WrappedData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7A5D3B4D9D4CB7675FA2E85C8506111C /* Sources */ = {
+		8E9379756708C68BF783BF61C83FFEE1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				16FF60AEF8BDF680E69FFE8D0F614098 /* Extensions.swift in Sources */,
-				BA7DEE6AD3A449F9CE63743CA82A5F0D /* KeystoneCrypto-dummy.m in Sources */,
-				5CDC5CDF76B670032B2C58E5E587AA16 /* KeystoneCrypto.swift in Sources */,
-				F23964FE7080465FC457D3A7E91047BE /* KeystoneException.swift in Sources */,
-				4B79DCA16200AF4B72C8E81C2AD72B81 /* LocalKey.swift in Sources */,
-				B8E4FBBFF2283E3639F37832D8FB2D4F /* OneTimeKey.swift in Sources */,
-				16A199AAE0B7629291A318F7A13DF88F /* Pinblock.swift in Sources */,
+				B6316A9B99458DD42DC957DE8976917D /* Crypto.swift in Sources */,
+				B225A37239536DA36864A193D6CFB838 /* Cryptor.swift in Sources */,
+				FD6D56E07A12981BF6D61F26EF2449BA /* Digest.swift in Sources */,
+				8094A26E2F1315CF319667FD3B5DDFB6 /* HMAC.swift in Sources */,
+				E49D022F9D3B17F6463F4F28FBEE1EF3 /* IDZSwiftCommonCrypto-dummy.m in Sources */,
+				A3DA2D86674F5BBB2251F04DA791DA1D /* KeyDerivation.swift in Sources */,
+				3EA5B6157E4A63A21EF991D0D741F178 /* Random.swift in Sources */,
+				AC4900A1AD184146FAB87FD3266072DC /* Status.swift in Sources */,
+				1CF2622A9EC870C1671D95FB8735772C /* StreamCryptor.swift in Sources */,
+				2AC1DB21BD133A4FB312D2EE3621FBF2 /* Updateable.swift in Sources */,
+				70E8AA2D114B4E4377D6399D73AE9DB1 /* Utilities.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EE4B100F81B104EC56B33225E01F73A0 /* Sources */ = {
+		DCB3120A42F130A317EFB6BF11E1499B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00C99E563C2C051865CE570DEDBBA6FA /* Pods-KeystoneCrypto_Example-dummy.m in Sources */,
+				D798B4B2504B4A7EF6D2913D3A593EE1 /* Pods-KeystoneCrypto_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		026A21C6C13508E4555CF24B73F88E06 /* PBXTargetDependency */ = {
+		047EA8D70A45FDDBC34EC75FA25FFFC4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = KeystoneCrypto;
 			target = E62DFEE38EEB0F91D090E42121B93548 /* KeystoneCrypto */;
-			targetProxy = 3A3E3BFCF3C1F1AB5531C76DEE7C0124 /* PBXContainerItemProxy */;
+			targetProxy = C7F667A505A06855DDE6604FF71FFFCA /* PBXContainerItemProxy */;
 		};
-		09749ED40AC39ECBBE84253FE6523F64 /* PBXTargetDependency */ = {
+		12E5B04C4E5BF68734D3F147B2BEECED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = IDZSwiftCommonCrypto;
+			target = 637DAC3D3B33C9E6E2E5BE0D93195855 /* IDZSwiftCommonCrypto */;
+			targetProxy = 5CDB3BC058669EDB27E7B1143376A501 /* PBXContainerItemProxy */;
+		};
+		7FCCFC61F717DFC1260B758D73F444B0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = IDZSwiftCommonCrypto;
+			target = 637DAC3D3B33C9E6E2E5BE0D93195855 /* IDZSwiftCommonCrypto */;
+			targetProxy = F1601A6C2E39E5ADD8E0055187ADD942 /* PBXContainerItemProxy */;
+		};
+		BB5EE989FDB4350CA99A716741E9E1DD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-KeystoneCrypto_Example";
 			target = BF96069813580174C490F2849982A4F6 /* Pods-KeystoneCrypto_Example */;
-			targetProxy = 53984E9B7D132AEE006493E296942DEF /* PBXContainerItemProxy */;
-		};
-		883ECFF6758E8E7C510D7AFCA1B14A7D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = IDZSwiftCommonCrypto;
-			target = 637DAC3D3B33C9E6E2E5BE0D93195855 /* IDZSwiftCommonCrypto */;
-			targetProxy = 3F79B216496058639874EDABAF4E5F12 /* PBXContainerItemProxy */;
-		};
-		F3095FB6A45B55638ECE9513C3FD2F09 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = IDZSwiftCommonCrypto;
-			target = 637DAC3D3B33C9E6E2E5BE0D93195855 /* IDZSwiftCommonCrypto */;
-			targetProxy = EEC930071945C2F6515B065643B98DCE /* PBXContainerItemProxy */;
+			targetProxy = 690F3733F3A7ACBA0638B9FE203F38B7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		31BF80816C96941F27DB1BB448BB3258 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 45B51D26D468F7CB6712BEAE24BA75CC /* IDZSwiftCommonCrypto.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/IDZSwiftCommonCrypto/IDZSwiftCommonCrypto-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/IDZSwiftCommonCrypto/IDZSwiftCommonCrypto-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/IDZSwiftCommonCrypto/IDZSwiftCommonCrypto.modulemap";
-				PRODUCT_MODULE_NAME = IDZSwiftCommonCrypto;
-				PRODUCT_NAME = IDZSwiftCommonCrypto;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		4B1F13D49B97FF90469FE040925F8D8C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_VERSION = 5.0;
-				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Release;
-		};
-		738410A28BCFF88A08DDA3C1C2112E24 /* Release */ = {
+		1A98FB78851E73FCB4B21617602536E2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3326275D2C2F8CA3B9C418FE1EB7C4C9 /* Pods-KeystoneCrypto_Example.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -747,13 +689,78 @@
 			};
 			name = Release;
 		};
-		7ED9CBCCDF112EA3D037081F7D07E35C /* Debug */ = {
+		3739843D1389581B6E18438F488A6B1C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 45A0E1D47D860F47D35B6B1EA97E0068 /* KeystoneCrypto.xcconfig */;
+			baseConfigurationReference = 6C90D40EA8A9DB71736A9AC4488EF45E /* Pods-KeystoneCrypto_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-KeystoneCrypto_Tests/Pods-KeystoneCrypto_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-KeystoneCrypto_Tests/Pods-KeystoneCrypto_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3D4971F6BEE61066B3D6ABE715CA1DA6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF8DCC962D511FD1CB35F68F88184A2B /* IDZSwiftCommonCrypto.release.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/IDZSwiftCommonCrypto/IDZSwiftCommonCrypto-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/IDZSwiftCommonCrypto/IDZSwiftCommonCrypto-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/IDZSwiftCommonCrypto/IDZSwiftCommonCrypto.modulemap";
+				PRODUCT_MODULE_NAME = IDZSwiftCommonCrypto;
+				PRODUCT_NAME = IDZSwiftCommonCrypto;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		79C77D8A54DD75BADA5B0C484B28F039 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F5AA330797FD43527AAAEFB9369B38A /* KeystoneCrypto.debug.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -780,14 +787,44 @@
 			};
 			name = Debug;
 		};
-		8A9A43EA8C019D53C2C02CA19F83BA37 /* Release */ = {
+		7E109BE1C56E15AB634E9BACD4D6572A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C15CE02151FF06BBF0B6648089DB468A /* IDZSwiftCommonCrypto.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/IDZSwiftCommonCrypto/IDZSwiftCommonCrypto-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/IDZSwiftCommonCrypto/IDZSwiftCommonCrypto-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/IDZSwiftCommonCrypto/IDZSwiftCommonCrypto.modulemap";
+				PRODUCT_MODULE_NAME = IDZSwiftCommonCrypto;
+				PRODUCT_NAME = IDZSwiftCommonCrypto;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8080777555703C218616A67F12E526FB /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D7329D0D6D0760C3524D67560B695F7F /* Pods-KeystoneCrypto_Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -816,44 +853,11 @@
 			};
 			name = Release;
 		};
-		96234553AC5DC7281BC853F08FAE6624 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 45A0E1D47D860F47D35B6B1EA97E0068 /* KeystoneCrypto.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/KeystoneCrypto/KeystoneCrypto-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/KeystoneCrypto/KeystoneCrypto-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/KeystoneCrypto/KeystoneCrypto.modulemap";
-				PRODUCT_MODULE_NAME = KeystoneCrypto;
-				PRODUCT_NAME = KeystoneCrypto;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		A8EFA68AC855A5B2B43BF716E27BD98D /* Debug */ = {
+		98498EE3A2793DC3C113702F5E2FB40A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -876,6 +880,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -914,49 +919,13 @@
 			};
 			name = Debug;
 		};
-		AC2238F7EC10BBD5040C889AAAB41ACB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6C90D40EA8A9DB71736A9AC4488EF45E /* Pods-KeystoneCrypto_Tests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-KeystoneCrypto_Tests/Pods-KeystoneCrypto_Tests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-KeystoneCrypto_Tests/Pods-KeystoneCrypto_Tests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		B52834ECD2C22F8FD16082F7BC0E1EC9 /* Debug */ = {
+		B1203791F0F02BB6181A97D2C2AEE2BB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 08533339F501A80DE7E2F21A73370A32 /* Pods-KeystoneCrypto_Example.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -984,12 +953,12 @@
 			};
 			name = Debug;
 		};
-		DFA26E131DD32A2CC8D114797925D618 /* Release */ = {
+		EC51104A00BC9F679897473B7FE47D9D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 45B51D26D468F7CB6712BEAE24BA75CC /* IDZSwiftCommonCrypto.xcconfig */;
+			baseConfigurationReference = D3A82801CA4CE026425B3330C0B49B1F /* KeystoneCrypto.release.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CODE_SIGN_IDENTITY = "";
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -998,14 +967,14 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/IDZSwiftCommonCrypto/IDZSwiftCommonCrypto-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/IDZSwiftCommonCrypto/IDZSwiftCommonCrypto-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/KeystoneCrypto/KeystoneCrypto-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/KeystoneCrypto/KeystoneCrypto-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/IDZSwiftCommonCrypto/IDZSwiftCommonCrypto.modulemap";
-				PRODUCT_MODULE_NAME = IDZSwiftCommonCrypto;
-				PRODUCT_NAME = IDZSwiftCommonCrypto;
+				MODULEMAP_FILE = "Target Support Files/KeystoneCrypto/KeystoneCrypto.modulemap";
+				PRODUCT_MODULE_NAME = KeystoneCrypto;
+				PRODUCT_NAME = KeystoneCrypto;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
@@ -1017,14 +986,94 @@
 			};
 			name = Release;
 		};
+		FFB17281C48AE863A31E46072D514569 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4638E19CA326258BBE540950157F08BF /* Build configuration list for PBXNativeTarget "Pods-KeystoneCrypto_Example" */ = {
+		01414886F2AD6EE14605B056FDBA9C87 /* Build configuration list for PBXNativeTarget "Pods-KeystoneCrypto_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B52834ECD2C22F8FD16082F7BC0E1EC9 /* Debug */,
-				738410A28BCFF88A08DDA3C1C2112E24 /* Release */,
+				B1203791F0F02BB6181A97D2C2AEE2BB /* Debug */,
+				1A98FB78851E73FCB4B21617602536E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0B89C6715AEC65404E00D02D335D7580 /* Build configuration list for PBXNativeTarget "KeystoneCrypto" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79C77D8A54DD75BADA5B0C484B28F039 /* Debug */,
+				EC51104A00BC9F679897473B7FE47D9D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		108D9727ECBB8421D7F87AD8A8163F22 /* Build configuration list for PBXNativeTarget "Pods-KeystoneCrypto_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3739843D1389581B6E18438F488A6B1C /* Debug */,
+				8080777555703C218616A67F12E526FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1032,35 +1081,17 @@
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A8EFA68AC855A5B2B43BF716E27BD98D /* Debug */,
-				4B1F13D49B97FF90469FE040925F8D8C /* Release */,
+				98498EE3A2793DC3C113702F5E2FB40A /* Debug */,
+				FFB17281C48AE863A31E46072D514569 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AFFBFF23E36982B09A893AC8359F2F0A /* Build configuration list for PBXNativeTarget "Pods-KeystoneCrypto_Tests" */ = {
+		8DC69D4E8085C813821CC54D4CC91D76 /* Build configuration list for PBXNativeTarget "IDZSwiftCommonCrypto" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AC2238F7EC10BBD5040C889AAAB41ACB /* Debug */,
-				8A9A43EA8C019D53C2C02CA19F83BA37 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B27E3737D8881205428277D808E58D2D /* Build configuration list for PBXNativeTarget "KeystoneCrypto" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				7ED9CBCCDF112EA3D037081F7D07E35C /* Debug */,
-				96234553AC5DC7281BC853F08FAE6624 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C1C1C9709CD679F4E518F7AEBB214F41 /* Build configuration list for PBXNativeTarget "IDZSwiftCommonCrypto" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				31BF80816C96941F27DB1BB448BB3258 /* Debug */,
-				DFA26E131DD32A2CC8D114797925D618 /* Release */,
+				7E109BE1C56E15AB634E9BACD4D6572A /* Debug */,
+				3D4971F6BEE61066B3D6ABE715CA1DA6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
