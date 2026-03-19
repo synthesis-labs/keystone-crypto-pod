@@ -40,7 +40,7 @@ class ViewController: UIViewController {
             authData: "random_session_id",
             handler: { [self] otk in
                 do {
-                    let lk = try kcrypto.GenerateLocalKey(otk: otk)
+                    let lk = try kcrypto.GenerateLocalKey(otk: otk, keyType: LocalKey.KeyType.AES )
                     let pinblock = try kcrypto.EncryptPin(pin: pin.text!, key: lk, pan: clientPan.text!)
 
                     translatePin(
@@ -63,7 +63,7 @@ class ViewController: UIViewController {
                                 authData: "random_session_id_2",
                                 handler: { [self] otk in
                                     do {
-                                        let lk = try kcrypto.GenerateLocalKey(otk: otk)
+                                        let lk = try kcrypto.GenerateLocalKey(otk: otk, keyType: LocalKey.KeyType.AES)
                                         translatePin(
                                             baseUrl: baseUrl.text!,
                                             apiKey: apiKey.text!,
@@ -81,7 +81,7 @@ class ViewController: UIViewController {
                                                 do {
                                                     let decryptedPin = try kcrypto.DecryptPinblock(pinblock: pinblock, key: lk)
                                                     DispatchQueue.main.async {
-                                                        outputLabel.text = "Pin from host \(decryptedPin)"
+                                                        outputLabel.text = "Pin from host: \(decryptedPin) "
                                                     }
                                                 } catch {
                                                     print(error.localizedDescription)

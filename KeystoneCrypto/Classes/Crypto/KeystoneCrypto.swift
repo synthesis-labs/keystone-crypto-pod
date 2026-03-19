@@ -217,16 +217,13 @@ public class KeystoneCrypto {
         }
 
         var pinhalf = "4"
-        pinhalf.append(String(pin.count))
+        pinhalf.append(String(pin.count, radix: 16, uppercase: true))
         pinhalf.append(pin)
-        pinhalf.append(String(repeating: "A", count: 16 - pinhalf.count))
+        pinhalf.append(String(repeating: "A", count: 14 - pin.count)) // pin starts at index 2
         pinhalf.append(RandomString(length: 16))
 
-        var panhalf = String(pan.count - 12)
-        let indexStartOfPan = pan.index(at: 0)!
-        let indexEndOfPan = pan.index(at: pan.count - 1)!
-        panhalf.append(String(pan[indexStartOfPan..<indexEndOfPan]))
-        panhalf.append(String(repeating: "0", count: 32 - panhalf.count))
+        let M = String(pan.count - 12, radix: 16, uppercase: true)
+        let panhalf =  M + pan + String(repeating: "0", count: 31 - pan.count);
 
         // Encrypt pinhalf using AES key
         let cryptor = Cryptor(
@@ -288,12 +285,9 @@ public class KeystoneCrypto {
                     "PAN must be at least 12 decimal characters"
             )
         }
-
-        var panhalf = String(pan!.count - 12)
-        let indexStartOfPan = pan!.index(at: 0)!
-        let indexEndOfPan = pan!.index(at: pan!.count - 1)!
-        panhalf.append(String(pan![indexStartOfPan..<indexEndOfPan]))
-        panhalf.append(String(repeating: "0", count: 32 - panhalf.count))
+        
+        let M = String(pan!.count - 12, radix: 16, uppercase: true)
+        let panhalf =  M + pan! + String(repeating: "0", count: 31 - pan!.count);
 
         let cryptor = Cryptor(
             operation: .decrypt,
