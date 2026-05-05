@@ -27,7 +27,8 @@ public class KeystoneCrypto {
     /// - Parameters:
     ///   - otk: `OneTimeKey` - The one-time key object.
     ///   - keyType: `LocalKey.KeyType` - The type of key to generate, defaulting to `LocalKey.KeyType.TripleDES`.
-    /// 
+    ///   - oaepHah: `OaepHash` - The padding scheme to be used, defaulting to `OaepHash.sha1`
+    ///
     /// - Returns: 
     ///   `LocalKey` - The generated LocalKey.
     /// 
@@ -35,10 +36,11 @@ public class KeystoneCrypto {
     ///   Any errors encountered during key generation.
     public func GenerateLocalKey(
         otk: OneTimeKey,
-        keyType: LocalKey.KeyType = LocalKey.KeyType.TripleDES
+        keyType: LocalKey.KeyType = LocalKey.KeyType.TripleDES,
+        oaepHash: OaepHash = OaepHash.sha1
     ) throws -> LocalKey {
         do {
-            let key = try LocalKey(wrappingKey: otk, keyType: keyType)
+            let key = try LocalKey(wrappingKey: otk, keyType: keyType, oaepHash: oaepHash)
             return key
         } catch let error {
             throw error

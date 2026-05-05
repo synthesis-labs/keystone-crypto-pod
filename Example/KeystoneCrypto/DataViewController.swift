@@ -36,7 +36,7 @@ class DataViewController: UIViewController {
             authData: "random_session_id",
             handler: { [self] otk in
                 do {
-                    let lk = try kcrypto.GenerateLocalKey(otk: otk)
+                    let lk = try kcrypto.GenerateLocalKey(otk: otk, oaepHash: OaepHash.sha256)
                     let encryptedData = try kcrypto.EncryptData(data: data.text!, key: lk, mode: BlockCipherMode.CBC)
 
                     translateData(
@@ -53,7 +53,7 @@ class DataViewController: UIViewController {
                                 authData: "random_session_id_2",
                                 handler: { [self] otk in
                                     do {
-                                        let lk = try kcrypto.GenerateLocalKey(otk: otk)
+                                        let lk = try kcrypto.GenerateLocalKey(otk: otk, keyType: LocalKey.KeyType.AES, oaepHash: OaepHash.sha256)
                                         let wrappedData =
                                         translateData(
                                             baseUrl: baseUrl.text!,

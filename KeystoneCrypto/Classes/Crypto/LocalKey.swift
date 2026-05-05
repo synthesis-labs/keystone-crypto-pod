@@ -22,10 +22,12 @@ public class LocalKey {
     private var publicKey: SecKey!
     private var kcv: String!
     private var keyType: KeyType = KeyType.TripleDES
+    private var oaepHash: OaepHash!
 
-    public init(wrappingKey: OneTimeKey, keyType: KeyType = KeyType.TripleDES) throws {
+    public init(wrappingKey: OneTimeKey, keyType: KeyType = KeyType.TripleDES, oaepHash: OaepHash) throws {
         self.keyType = keyType
         self.wrappingKey = wrappingKey
+        self.oaepHash = oaepHash
         do {
             try self.publicKey = LoadPublicKey(wrappingKey: wrappingKey)
             try self.localKey = GenerateLocalKey(keyType: keyType)
@@ -140,7 +142,7 @@ public class LocalKey {
     }
 
     private func EncryptLocalKey(localKey: [UInt8], pubKey: SecKey) throws -> String {
-        let algorithm: SecKeyAlgorithm = .rsaEncryptionOAEPSHA1
+        let algorithm: SecKeyAlgorithm =  oaepHash == OaepHash.sha1 ?  .rsaEncryptionOAEPSHA1 : .rsaEncryptionOAEPSHA256
         var error: Unmanaged<CFError>?
         guard let cipherText = SecKeyCreateEncryptedData(publicKey,
                                                          algorithm,
