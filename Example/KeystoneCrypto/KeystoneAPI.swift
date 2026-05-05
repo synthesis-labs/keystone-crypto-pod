@@ -92,7 +92,7 @@ public func getOneTimeKey(
     authData: String,
     handler: @escaping (OneTimeKey) -> Void
 ) {
-    let request = ["data": authData]
+    let request: [String : Any] = ["data": authData, "oaepHash": OaepHash.sha256.rawValue ]
 
     keystoneHttpRequest(
         baseUrl: baseUrl,
@@ -175,7 +175,8 @@ public func translateData(
         ],
         "clientKey": [
             "wrappedKey": encryptedData.getClientKey().getWrappedKey(),
-            "alg": encryptedData.getClientKey().getAlg()
+            "alg": encryptedData.getClientKey().getAlg(),
+            "oaepHash": OaepHash.sha256.rawValue
         ],
         "authData": authData,
         "direction": direction
