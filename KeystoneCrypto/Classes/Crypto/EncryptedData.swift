@@ -8,13 +8,18 @@
 
 import Foundation
 
+public enum Algorithm: String {
+   case AES128
+   case DES3
+}
+
 public class EncryptedData {
     private var cipherText: String
     private var iv: String?
     private var mode: BlockCipherMode
-    private var alg: String
+    private var alg: Algorithm
 
-    public init(cipherText: String, iv: String?, mode: BlockCipherMode, alg: String) {
+    public init(cipherText: String, iv: String?, mode: BlockCipherMode, alg: Algorithm) {
         self.cipherText = cipherText
         self.iv = iv
         self.mode = mode
@@ -33,7 +38,7 @@ public class EncryptedData {
         return mode
     }
 
-    public func getAlg() -> String {
+    public func getAlg() -> Algorithm {
         return alg
     }
 }

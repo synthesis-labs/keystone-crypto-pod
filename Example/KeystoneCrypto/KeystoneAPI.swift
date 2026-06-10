@@ -195,7 +195,7 @@ public func translateData(
                 cipherText: (dict["cipherText"] as? String)!,
                 iv: dict["iv"] as! String?,
                 mode: BlockCipherMode(rawValue: (dict["mode"] as! String?)!)!,
-                alg: (dict["alg"] as! String?)!
+                alg: Algorithm(rawValue: (dict["alg"] as! String?)!)!
             ))
         }
     )

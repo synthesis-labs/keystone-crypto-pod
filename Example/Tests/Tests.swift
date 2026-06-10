@@ -106,9 +106,9 @@ class Tests: XCTestCase {
 
                             XCTAssertEqual(encryptedData.getMode().rawValue, mode.rawValue)
                             if alg == LocalKey.KeyType.AES {
-                                XCTAssertEqual(encryptedData.getAlg(), "AES128")
+                                XCTAssertEqual(encryptedData.getAlg(), Algorithm.AES128)
                             } else {
-                                XCTAssertEqual(encryptedData.getAlg(), "DES3")
+                                XCTAssertEqual(encryptedData.getAlg(), Algorithm.DES3)
                             }
 
                             if mode == BlockCipherMode.ECB {

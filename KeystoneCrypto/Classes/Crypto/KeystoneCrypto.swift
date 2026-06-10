@@ -34,6 +34,7 @@ public class KeystoneCrypto {
     /// 
     /// - Throws: 
     ///   Any errors encountered during key generation.
+    @available(*, deprecated, renamed: "generateLocalKey()", message: "This method will no longer be supported in the future.")
     public func GenerateLocalKey(
         otk: OneTimeKey,
         keyType: LocalKey.KeyType = LocalKey.KeyType.TripleDES,
@@ -46,6 +47,20 @@ public class KeystoneCrypto {
             throw error
         }
     }
+    
+    
+    /// Generates a local key.
+    /// Generates an AES key and uses SHA256 for OAEP
+    ///
+    /// - Parameters:
+    ///   - otk: `OneTimeKey` - The one-time key object.
+    ///
+    /// - Returns:
+    ///   `LocalKey` - The generated LocalKey.
+    ///
+    /// - Throws:
+    ///   Any errors encountered during key generation.
+    public func generateLocalKey(oneTimeKey: OneTimeKey) throws -> LocalKey { try GenerateLocalKey(otk: oneTimeKey, keyType: LocalKey.KeyType.AES, oaepHash: OaepHash.sha256 )}
 
     /// Encrypts a PIN.
     /// 
@@ -61,6 +76,7 @@ public class KeystoneCrypto {
     ///   `KeystoneExceptions.InvalidInput` if the PIN is not between 4 and 12 digits or 
     ///    contains non-numeric characters.
     ///   Any other errors encountered during encryption.
+    @available(*, deprecated, renamed: "encryptPin()", message: "This method will no longer be supported in the future.")
     public func EncryptPin(pin: String, key: LocalKey, pan: String = "1234567890123456") throws -> Pinblock {
         do {
             guard pin.count >= 4, pin.count <= 12, pin.isNumber else {
@@ -80,6 +96,22 @@ public class KeystoneCrypto {
             throw error
         }
     }
+    
+    /// Encrypts a PIN.
+    ///
+    /// - Parameters:
+    ///   - pin: `String` -  The PIN to encrypt.
+    ///   - key: `LocalKey` -  - The local key used for encryption.
+    ///   - pan: `String` - The Primary Account Number (PAN).
+    ///
+    /// - Returns:
+    ///   `Pinblock` - The encrypted Pinblock.
+    ///
+    /// - Throws:
+    ///   `KeystoneExceptions.InvalidInput` if the PIN is not between 4 and 12 digits or
+    ///    contains non-numeric characters.
+    ///   Any other errors encountered during encryption.
+    public func encryptPin(pin: String, key: LocalKey, pan: String = "1234567890123456") throws -> Pinblock { try EncryptPin(pin: pin, key: key, pan: pan)}
 
     /// Decrypts a PIN from the provided Pinblock.
     /// 
@@ -92,6 +124,7 @@ public class KeystoneCrypto {
     /// 
     /// - Throws: 
     ///   Any errors encountered during decryption.
+    @available(*, deprecated, renamed: "decryptPin()", message: "This method will no longer be supported in the future.")
     public func DecryptPinblock(pinblock: Pinblock, key: LocalKey) throws -> String {
         do {
             let pin: String
@@ -108,6 +141,19 @@ public class KeystoneCrypto {
             throw error
         }
     }
+    
+    /// Decrypts a PIN from the provided Pinblock.
+    ///
+    /// - Parameters:
+    ///   - pinblock: `Pinblock` - An object containing encrypted PIN data.
+    ///   - key: `LocalKey` - The local key used for decryption.
+    ///
+    /// - Returns:
+    ///   `String` - The decrypted PIN.
+    ///
+    /// - Throws:
+    ///   Any errors encountered during decryption.
+    public func decryptPin(pinblock: Pinblock, key: LocalKey) throws -> String { try DecryptPinblock(pinblock: pinblock, key: key)}
 
     private func RandomString(length: Int) -> String {
 
@@ -341,20 +387,61 @@ public class KeystoneCrypto {
 
         return clearPin
     }
+    
+    /// Encrypts sensitive data using the provided local key.
+    ///
+    /// This method encrypts a string of data using AES or Triple DES encryption with CBC mode.
+    /// The encryption process automatically:
+    /// - Generates a random Initialization Vector (IV) appropriate for the key type
+    /// - Applies PKCS#7 padding to the plaintext
+    /// - Returns wrapped data containing the encrypted content and key material
+    ///
+    /// **Algorithm Selection:**
+    /// - If the key is AES: Uses AES encryption with a 16-byte IV
+    /// - If the key is TripleDES: Uses 3DES encryption with an 8-byte IV
+    ///
+    /// **Usage Example:**
+    /// ```swift
+    /// let plaintext = "Sensitive payment information"
+    /// do {
+    ///     let wrappedData = try keystone.encryptData(data: plaintext, key: localKey)
+    ///     print("Encrypted data: \(wrappedData.encryptedData.cipherText)")
+    /// } catch {
+    ///     print("Encryption failed: \(error)")
+    /// }
+    /// ```
+    ///
+    /// - Parameters:
+    ///   - data: `String` - The plaintext data to encrypt. Can contain any UTF-8 characters.
+    ///   - key: `LocalKey` - The local key to use for encryption. Must be generated using `generateLocalKey()`.
+    ///
+    /// - Returns:
+    ///   `WrappedData` - An object containing:
+    ///   - `encryptedData`: The encrypted payload with ciphertext, IV, mode, and algorithm
+    ///   - `clientKey`: The wrapped client key material
+    ///   - `wrappingKeyId`: The ID of the wrapping key used
+    ///
+    /// - Throws:
+    ///   `KeystoneExceptions.CryptoError` if encryption fails
+    ///   Any other errors encountered during the encryption process.
+    ///
+    /// - Note: The method uses CBC mode by default for enhanced security.
+    public func encryptData(data: String, key: LocalKey) throws -> WrappedData { try EncryptData(data: data , key: key, mode: BlockCipherMode.CBC)}
 
+    @available(*, deprecated, renamed: "encryptData()", message: "This method will no longer be supported in the future.")
     public func EncryptData(data: String, key: LocalKey, mode: BlockCipherMode) throws -> WrappedData {
         let algorithm: Cryptor.Algorithm
         var iv: [UInt8]
-        let returnAlg: String
+        let returnAlg: Algorithm
         do {
             if key.getKeyType() == LocalKey.KeyType.TripleDES {
                 algorithm = Cryptor.Algorithm.tripleDES
                 iv = try GenerateRandomKeyBytes(len: 8)
-                returnAlg = "DES3"
+                returnAlg = Algorithm.DES3
             } else {
                 algorithm = Cryptor.Algorithm.aes
                 iv = try GenerateRandomKeyBytes(len: 16)
-                returnAlg = "AES128"
+                returnAlg = Algorithm.AES128
             }
         } catch let error {
             throw error
@@ -401,7 +488,54 @@ public class KeystoneCrypto {
             wrappingKeyId: key.getWrappingKey().getId()
         )
     }
+    
+    /// Decrypts encrypted data using the provided local key.
+    ///
+    /// This method decrypts data that was previously encrypted using the `encryptData()` method.
+    /// The decryption process:
+    /// - Extracts the IV from the encrypted data payload
+    /// - Decrypts the ciphertext using the appropriate algorithm (AES or Triple DES)
+    /// - Removes PKCS#7 padding from the plaintext
+    /// - Returns the original plaintext string
+    ///
+    /// **Algorithm Detection:**
+    /// The method automatically determines the encryption algorithm (AES or 3DES) based on the key type
+    /// and uses the corresponding decryption algorithm and IV size.
+    ///
+    /// **Usage Example:**
+    /// ```swift
+    /// do {
+    ///     let plaintext = try keystone.decryptData(data: wrappedData.encryptedData, key: localKey)
+    ///     print("Decrypted data: \(plaintext)")
+    /// } catch {
+    ///     print("Decryption failed: \(error)")
+    /// }
+    /// ```
+    ///
+    /// - Parameters:
+    ///   - data: `EncryptedData` - The encrypted data object containing:
+    ///     - `cipherText`: Base64-encoded encrypted content
+    ///     - `iv`: Base64-encoded initialization vector (required for CBC mode)
+    ///     - `mode`: The cipher mode used (CBC or ECB)
+    ///     - `alg`: The encryption algorithm used (AES128, DES3, etc.)
+    ///   - key: `LocalKey` - The local key to use for decryption. Must be the same key used for encryption.
+    ///
+    /// - Returns:
+    ///   `String` - The decrypted plaintext data as UTF-8 string.
+    ///
+    /// - Throws:
+    ///   `KeystoneExceptions.CryptoError` if:
+    ///     - The ciphertext is not valid Base64
+    ///     - The IV is missing or invalid
+    ///     - Decryption fails during the cipher operations
+    ///     - The decrypted data cannot be decoded as UTF-8
+    ///   Any other errors encountered during the decryption process.
+    ///
+    /// - Note: This method only works with data encrypted using the `encryptData()` method.
+    ///   The key used for decryption must match the key used for encryption.
+    public func decryptData(data: EncryptedData, key: LocalKey) throws -> String { try DecryptData(data: data, key: key)}
 
+    @available(*, deprecated, renamed: "decryptData", message: "This method will no longer be supported in the future.")
     public func DecryptData(data: EncryptedData, key: LocalKey) throws -> String {
         let algorithm: Cryptor.Algorithm
         var iv: [UInt8]
